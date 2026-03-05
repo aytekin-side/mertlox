@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="A20aMMSVm4KiVZX49-tHL3IsNgCYuFif7pcT84rgfrw" />
+<title>Mertlox — The Most Popular Games on Roblox</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root {
+  --red: #FF1A1A;
+  --red-glow: #FF1A1A66;
+  --green: #22C55E;
+  --green-glow: rgba(34,197,94,0.4);
+  --bg-deep: #08080C;
+  --bg-card: #111118;
+  --bg-card-hover: #181822;
+  --bg-surface: #0E0E14;
+  --text-primary: #F0F0F5;
+  --text-secondary: #8888A0;
+  --text-dim: #55556A;
+  --border: #1E1E2A;
+  --border-hover: #2A2A3A;
+  --glass-border: rgba(255,255,255,0.06);
+}
+
+html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--red) var(--bg-deep); }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 0 clamp(1.5rem,4vw,3rem); height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(8,8,12,0.85);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border-bottom: 1px solid var(--glass-border);
+}
+.nav-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+.nav-logo-icon {
+  width: 32px; height: 32px; background: var(--green); border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.15rem; color: white;
+  box-shadow: 0 0 16px var(--green-glow);
+}
+.nav-logo-text { font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 1rem; color: var(--text-primary); }
+.nav-logo-text .green { color: var(--green); }
+.nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text-primary); }
+.nav-cta {
+  background: var(--red) !important; color: white !important;
+  padding: 0.45rem 1rem; border-radius: 6px; font-weight: 600 !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px var(--red-glow); }
+
+/* MAIN VIEWS */
+#list-view, #detail-view { display: none; }
+#list-view.active, #detail-view.active { display: block; }
+
+/* GAMES SECTION */
+.games-section { padding: calc(64px + 2rem) clamp(1.5rem,4vw,3rem) 3rem; background: var(--bg-surface); min-height: 100vh; }
+.section-header { text-align: center; margin-bottom: 2rem; }
+.section-label { font-size: 0.7rem; color: var(--red); text-transform: uppercase; letter-spacing: 3px; font-weight: 600; margin-bottom: 0.5rem; }
+.section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem,3.5vw,2.5rem); letter-spacing: 1px; }
+
+/* FILTERS */
+.filters-bar { max-width: 1300px; margin: 0 auto 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between; }
+.search-box { position: relative; flex: 1; min-width: 200px; max-width: 340px; }
+.search-box input {
+  width: 100%; padding: 0.65rem 1rem 0.65rem 2.6rem;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 9px;
+  color: var(--text-primary); font-family: 'Outfit', sans-serif; font-size: 0.85rem; outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-box input::placeholder { color: var(--text-dim); }
+.search-box input:focus { border-color: var(--red); box-shadow: 0 0 0 3px rgba(255,26,26,0.1); }
+.search-box svg { position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%); color: var(--text-dim); width: 16px; height: 16px; }
+.filter-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.filter-tag {
+  padding: 0.45rem 0.85rem; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 7px; color: var(--text-secondary); font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.2s; white-space: nowrap;
+}
+.filter-tag:hover { border-color: var(--border-hover); color: var(--text-primary); background: var(--bg-card-hover); }
+.filter-tag.active { background: var(--red); border-color: var(--red); color: white; box-shadow: 0 0 16px var(--red-glow); }
+
+/* GAMES GRID */
+.games-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem; }
+
+/* GAME CARD */
+.game-card {
+  position: relative; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden; cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), border-color 0.3s, box-shadow 0.3s;
+  opacity: 0; transform: translateY(30px);
+}
+.game-card.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease-out, transform 0.5s ease-out, border-color 0.3s, box-shadow 0.3s; }
+.game-card:hover { transform: translateY(-5px); border-color: var(--red); box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 30px var(--red-glow); }
+.card-thumb-wrapper { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; }
+.card-thumb { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); }
+.game-card:hover .card-thumb { transform: scale(1.05); }
+.card-thumb-overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--bg-card) 0%, transparent 50%); pointer-events: none; }
+.card-genre-badge {
+  position: absolute; top: 0.6rem; left: 0.6rem; padding: 0.25rem 0.6rem;
+  background: rgba(8,8,12,0.75); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08); border-radius: 5px;
+  font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--red); z-index: 1;
+}
+.card-live-badge {
+  position: absolute; top: 0.6rem; right: 0.6rem; padding: 0.25rem 0.6rem;
+  background: rgba(34,197,94,0.15); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(34,197,94,0.25); border-radius: 5px;
+  font-size: 0.65rem; font-weight: 600; color: var(--green); z-index: 1;
+  display: flex; align-items: center; gap: 0.35rem;
+}
+.card-live-badge .dot { width: 5px; height: 5px; background: var(--green); border-radius: 50%; animation: blink 2s ease-in-out infinite; }
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+.card-body { padding: 0.85rem 1.1rem 1.1rem; }
+.card-title { font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.3rem; line-height: 1.3; transition: color 0.2s; }
+.game-card:hover .card-title { color: var(--red); }
+.card-desc { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.8rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card-stats { display: flex; gap: 1.2rem; padding-top: 0.65rem; border-top: 1px solid var(--border); }
+.card-stat { display: flex; align-items: center; gap: 0.35rem; }
+.card-stat svg { width: 13px; height: 13px; color: var(--text-dim); flex-shrink: 0; }
+.card-stat-value { font-family: 'Chakra Petch', sans-serif; font-weight: 600; font-size: 0.78rem; color: var(--text-primary); }
+.card-stat-label { font-size: 0.67rem; color: var(--text-dim); margin-left: 0.1rem; }
+
+/* NO RESULTS */
+.no-results { grid-column: 1/-1; text-align: center; padding: 3rem 2rem; color: var(--text-dim); }
+.no-results h3 { font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 0.4rem; }
+
+/* ═══════════════════════════════════
+   DETAIL VIEW
+   ═══════════════════════════════════ */
+.detail-page { padding: calc(64px + 1.5rem) clamp(1rem,4vw,3rem) 3rem; max-width: 1100px; margin: 0 auto; }
+
+.detail-back {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  margin-bottom: 1.5rem; transition: color 0.2s; cursor: pointer; background: none; border: none;
+  font-family: 'Outfit', sans-serif;
+}
+.detail-back:hover { color: var(--text-primary); }
+.detail-back svg { width: 16px; height: 16px; }
+
+.detail-hero-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); margin-bottom: 1.5rem; }
+
+.detail-header { margin-bottom: 2rem; }
+.detail-genre { display: inline-block; padding: 0.3rem 0.7rem; background: rgba(255,26,26,0.1); border: 1px solid rgba(255,26,26,0.2); border-radius: 5px; font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--red); margin-bottom: 0.75rem; }
+.detail-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem,5vw,3.2rem); letter-spacing: 1px; line-height: 1; margin-bottom: 0.5rem; }
+.detail-creator { font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.25rem; }
+.detail-creator strong { color: var(--text-primary); font-weight: 600; }
+
+.detail-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; margin-bottom: 2rem; }
+.detail-stat-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
+  padding: 1rem; text-align: center;
+}
+.detail-stat-card .val { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--text-primary); line-height: 1; margin-bottom: 0.2rem; }
+.detail-stat-card .val.live { color: var(--green); }
+.detail-stat-card .lbl { font-size: 0.68rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; }
+
+.detail-desc { margin-bottom: 2rem; }
+.detail-desc h3 { font-family: 'Chakra Petch', sans-serif; font-size: 1rem; margin-bottom: 0.6rem; }
+.detail-desc p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+
+.detail-play-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--green); color: white; border: none; padding: 0.7rem 1.5rem;
+  border-radius: 8px; font-family: 'Chakra Petch', sans-serif; font-weight: 700;
+  font-size: 0.9rem; cursor: pointer; text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s; margin-bottom: 2.5rem;
+}
+.detail-play-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px var(--green-glow); }
+.detail-play-btn svg { width: 16px; height: 16px; }
+
+.detail-screenshots h3 { font-family: 'Chakra Petch', sans-serif; font-size: 1rem; margin-bottom: 1rem; }
+.screenshots-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.75rem; }
+.screenshots-grid img {
+  width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px;
+  border: 1px solid var(--border); cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.screenshots-grid img:hover { transform: scale(1.02); border-color: var(--red); box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed; inset: 0; z-index: 2000; background: rgba(0,0,0,0.92);
+  display: none; align-items: center; justify-content: center; cursor: zoom-out;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 92vw; max-height: 88vh; border-radius: 10px; cursor: default; }
+.lightbox-close {
+  position: absolute; top: 1rem; right: 1.5rem; background: none; border: none;
+  color: white; font-size: 2rem; cursor: pointer; opacity: 0.6; transition: opacity 0.2s;
+  font-family: sans-serif;
+}
+.lightbox-close:hover { opacity: 1; }
+
+/* FOOTER */
+footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
+.footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
+.footer-line { font-size: 0.72rem; color: var(--text-dim); line-height: 1.8; }
+.footer-line a { color: var(--red); text-decoration: none; }
+.footer-line a:hover { text-decoration: underline; }
+.footer-updated { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.5rem; }
+.footer-updated span { color: var(--green); font-weight: 600; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .games-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .filters-bar { flex-direction: column; align-items: stretch; }
+  .search-box { max-width: 100%; }
+  .filter-tags { justify-content: center; }
+  .screenshots-grid { grid-template-columns: 1fr; }
+  .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo" onclick="showList(); return false;">
+    <div class="nav-logo-icon">M</div>
+    <div class="nav-logo-text">Mert<span class="green">lox</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showList(); return false;">Games</a></li>
+    <li><a href="https://www.roblox.com/charts" target="_blank" rel="noopener" class="nav-cta">Roblox Charts</a></li>
+  </ul>
+</nav>
+
+<!-- LIST VIEW -->
+<div id="list-view" class="active">
+  <section class="games-section">
+    <div class="section-header">
+      <div class="section-label">Leaderboard</div>
+      <h2 class="section-title">Top Games by Players Right Now</h2>
+    </div>
+    <div class="filters-bar">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="search-input" placeholder="Search games...">
+      </div>
+      <div class="filter-tags" id="filter-tags">
+        <button class="filter-tag active" data-filter="all">All</button>
+        <button class="filter-tag" data-filter="Simulator">Simulator</button>
+        <button class="filter-tag" data-filter="Action RPG">Action RPG</button>
+        <button class="filter-tag" data-filter="Horror">Horror</button>
+        <button class="filter-tag" data-filter="Social">Social</button>
+        <button class="filter-tag" data-filter="FPS">FPS</button>
+        <button class="filter-tag" data-filter="Roleplay">Roleplay</button>
+        <button class="filter-tag" data-filter="Strategy">Strategy</button>
+      </div>
+    </div>
+    <div class="games-grid" id="games-grid"></div>
+  </section>
+</div>
+
+<!-- DETAIL VIEW -->
+<div id="detail-view">
+  <div class="detail-page" id="detail-content"></div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img id="lightbox-img" src="" alt="Screenshot">
+</div>
+
+<footer>
+  <div class="footer-brand">Mert<span style="color:#22C55E">lox</span></div>
+  <p class="footer-line">
+    Data sourced from <a href="https://www.rolimons.com/games" target="_blank" rel="noopener">Rolimon's</a> &amp; <a href="https://www.roblox.com/charts" target="_blank" rel="noopener">Roblox Charts</a>. Not affiliated with Roblox Corporation.
+  </p>
+  <p class="footer-updated">Last updated: <span id="updated-date">loading...</span></p>
+</footer>
+
+<script>
+// ═══════════════════════════════════
+// DATA
+// ═══════════════════════════════════
+const games = [
+  {
+    slug: "99-nights-in-the-forest",
+    name: "99 Nights in the Forest",
+    thumb: "https://tr.rbxcdn.com/180DAY-65eebaac747ed81ff9dfdc85643a1e12/768/432/Image/Webp/noFilter",
+    visits: "24.6B",
+    players: "3.5M",
+    genre: "Horror",
+    desc: "A terrifying forest horror survival game. Defend your camp, rescue missing children, and survive 99 nights hunted by The Deer.",
+    url: "https://www.roblox.com/games/79546208627805",
+    universeId: 7326934954,
+    creator: "Grandma's Favourite Games",
+    maxPlayers: 25,
+    favorites: "6.3M",
+    created: "Mar 2025",
+    longDesc: "99 Nights in the Forest is a horror survival experience where you must defend your camp, rescue four missing children, and survive against dangerous creatures lurking in the dark woods. Hostile enemies including The Deer, Cultists, and The Owl frequently appear and attack if you're outside the safe zone. The campfire acts like a magical shield — as long as you remain within its light, you are protected. Gather resources like wood, coal, and meat to survive, and choose from 23 unique classes including production, combat, support, and exploration. Inspired by a real-life incident involving four children who survived a 2023 plane crash and lived in the jungle for over 40 days.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-65eebaac747ed81ff9dfdc85643a1e12/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-643b9b9285f3bd9b63cf392db12a4d87/768/432/Image/Webp/noFilter",
+      "https://cdn.mos.cms.futurecdn.net/jiq3WRZa8XANwTPAFPbbKU.jpg",
+      "https://cdn.mos.cms.futurecdn.net/K9eYkEKvBqbfQDxUiTkBKU.jpg",
+      "https://cdn.mos.cms.futurecdn.net/w5MHjha45SzeguxVyquzQ5.jpg",
+      "https://cdn.mos.cms.futurecdn.net/dNraqMMT7HEB46U32pBsQ4.jpg",
+      "https://cdn.mos.cms.futurecdn.net/hNvW49Cw6TwtAYQoRD65RU.jpg",
+      "https://cdn.mos.cms.futurecdn.net/Doe5CSPRWFCAnTc3rHy93K.jpg",
+      "https://cdn.mos.cms.futurecdn.net/XwaDSBmFDcJ2psAVcwDGXi.jpg",
+      "https://bloxinformer.com/wp-content/uploads/2025/06/99nightsfeature.webp"
+    ]
+  },
+  {
+    slug: "escape-tsunami-for-brainrots",
+    name: "Escape Tsunami for Brainrots",
+    thumb: "https://tr.rbxcdn.com/180DAY-6eed53ae46fb62bbc79b497e0745fcf3/768/432/Image/Webp/noFilter",
+    visits: "4.2B",
+    players: "2.9M",
+    genre: "Simulator",
+    desc: "Collect valuable Brainrots, survive incoming tsunamis in safe zones, and upgrade speed and capacity. Go deeper for rarer Brainrots!",
+    url: "https://www.roblox.com/games/131623223084840",
+    universeId: 9363735110,
+    creator: "Wave of Brainrots",
+    maxPlayers: 8,
+    favorites: "1.4M",
+    created: "Dec 2025",
+    longDesc: "In Escape Tsunami for Brainrots, your goal is to collect valuable Brainrots, survive incoming tsunamis by hiding in safe zones, and use the money earned from Brainrots to buy upgrades like speed and carrying capacity. Run fast to grab Brainrots, avoid the crashing waves, upgrade your creatures to earn more money, and expand your base for more slots. The deeper you venture, the rarer the Brainrots you'll find. Rebirth to progress through the leaderboards and dominate the competition.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-3c2118390c3969b2ade031b71aa15fb2/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-6eed53ae46fb62bbc79b497e0745fcf3/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-4b488493645317746db9c399d5b5803e/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-b7e840b7027e66f3366b081059ea4ab5/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-991f173682c74bfa611e96ac26714656/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "adopt-me",
+    name: "Adopt Me!",
+    thumb: "https://tr.rbxcdn.com/180DAY-369b4c16d281bf74dc7a9683f79b9df0/768/432/Image/Webp/noFilter",
+    visits: "42.4B",
+    players: "759K",
+    genre: "Social",
+    desc: "Adopt and raise adorable pets, trade and collect legendary creatures, build your dream home, and roleplay with millions of friends.",
+    url: "https://www.roblox.com/games/920587237",
+    universeId: 383310974,
+    creator: "Uplift Games",
+    maxPlayers: 35,
+    favorites: "28.5M",
+    created: "Jul 2017",
+    longDesc: "Adopt Me! is one of the biggest games ever made on Roblox. Adopt and raise a huge variety of adorable pets — from common dogs and cats to ultra-rare legendary creatures. Trade with millions of other players, decorate your dream home, explore themed worlds, and roleplay with friends. Regular updates bring new pets, seasonal events, and exciting features that keep millions coming back every day.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-de7ca6e6993148310bed2b2bbc6a8dde/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-f9315e267040cf6f0eb61f2735c3deef/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a13c4f164cda0e28f86464cec3bc5844/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-53845506ae0786d84cd62feef083f1ea/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-fca2a22417e07d8b0271f9fe72ce4409/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-e4b66da9872ba86f2fd67a50ca6515ca/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "brookhaven-rp",
+    name: "Brookhaven RP",
+    thumb: "https://tr.rbxcdn.com/180DAY-4fa9c5cc66deb2a2573f1c203be42d69/768/432/Image/Webp/noFilter",
+    visits: "79.4B",
+    players: "696K",
+    genre: "Roleplay",
+    desc: "A life simulator where you choose a house, customize it, drive around town, and roleplay with friends in the city of Brookhaven.",
+    url: "https://www.roblox.com/games/4924922222",
+    universeId: 1686885941,
+    creator: "Brookhaven by Voldex",
+    maxPlayers: 28,
+    favorites: "26.3M",
+    created: "Apr 2020",
+    longDesc: "Brookhaven RP is the most visited game in Roblox history. It's a life simulation where you can choose from amazing houses, customize your home, drive cool vehicles, and roleplay as whoever you want to be. Hang out with friends, explore the city, and create your own stories in this open-world experience. Regular updates add new vehicles, houses, and features.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-4fa9c5cc66deb2a2573f1c203be42d69/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-ee8aae16c0eb0f05122972d3b8510529/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a4fb7b266105fa038d92bf425d58ee53/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-df946f12a2c925ce03dc4a5c1eb3336a/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-7454d5fe62b70ebee5289687b926af47/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-808370c4e617d8ce593b16f54eaf645d/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "steal-a-brainrot",
+    name: "Steal a Brainrot",
+    thumb: "https://tr.rbxcdn.com/180DAY-aa4c79d32be85b7a85bfc4ac97d4a9a2/768/432/Image/Webp/noFilter",
+    visits: "60.8B",
+    players: "634K",
+    genre: "Simulator",
+    desc: "Build a base with weird Brainrots that generate cash, steal from other players, and defend your base. Broke the concurrent player record with 25M+ players.",
+    url: "https://www.roblox.com/games/109983668079237",
+    universeId: 7709344486,
+    creator: "BRAZILIAN SPYDER",
+    maxPlayers: 8,
+    favorites: "26.4M",
+    created: "May 2025",
+    longDesc: "Steal a Brainrot lets you build a base filled with weird-looking Brainrots that generate cash based on their rarity. Steal Brainrots from other players while defending your own base using bats, slappers, and traps. The game broke Roblox's all-time concurrent player record in September 2025, reaching over 25 million simultaneous users. Collect rare and legendary Brainrots, upgrade your defenses, and climb the leaderboards.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-d10d7516a89c893544f4622a77e802be/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-aa4c79d32be85b7a85bfc4ac97d4a9a2/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-09ffff337a0cb7d32db9b95d7a530a9f/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-8649a86433e7f9b57f34065d334b3c5e/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-bfcc710b1a232b34e2d3b40f963f8cde/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a5434f50e5846e446aab631fbf0a92e7/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "rivals",
+    name: "Rivals",
+    thumb: "https://tr.rbxcdn.com/180DAY-60c154f21752ff4cb520340183edb77a/768/432/Image/Webp/noFilter",
+    visits: "12.2B",
+    players: "434K",
+    genre: "FPS",
+    desc: "Challenge players in 1v1 to 5v5 FPS duels with 40+ weapons. Winner of Best Shooter at Roblox Innovation Awards 2025.",
+    url: "https://www.roblox.com/games/17625359962",
+    universeId: 6035872082,
+    creator: "Nosniy Games",
+    maxPlayers: 40,
+    favorites: "61.4M",
+    created: "May 2024",
+    longDesc: "Rivals is an award-winning FPS game where you challenge other players in 1v1 to 5v5 duels. With 40+ weapons spanning primaries, secondaries, melees, and utilities, every match plays differently. Winner of Best Shooter Experience at the Roblox Innovation Awards 2025. Available on Desktop, Mobile, Xbox, and PlayStation 5. The first to reach 5 kills wins each round.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-60c154f21752ff4cb520340183edb77a/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-eb783deba3b661ff753ab9be4089188d/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-01ab8c0bc84f8fb8ab3c9776d6bad9de/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-997346c752e21ab3a9015615c2a265e6/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-36fd690cbf4077d15d6689d8eb3d5875/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-2777ed350b4aea4fcee51549dd1a74c6/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "blox-fruits",
+    name: "Blox Fruits",
+    thumb: "https://tr.rbxcdn.com/180DAY-11317876063dea24a4abe47d4dbb6237/768/432/Image/Webp/noFilter",
+    visits: "59.4B",
+    players: "349K",
+    genre: "Action RPG",
+    desc: "Anime-inspired adventure where you become a master swordsman or powerful blox fruit user, fight tough enemies, and sail across oceans.",
+    url: "https://www.roblox.com/games/2753915549",
+    universeId: 994732206,
+    creator: "Gamer Robot Inc",
+    maxPlayers: 12,
+    favorites: "18.1M",
+    created: "Jan 2019",
+    longDesc: "Blox Fruits is an anime-inspired action RPG where you can become a powerful fighter by mastering swords or consuming magical Blox Fruits that grant devastating abilities. Train to become the strongest player, fight tough enemies and powerful bosses, and sail across vast oceans to discover hidden secrets. With dozens of unique fruits to find — from Flame and Ice to Dragon and Dough — every playthrough offers new powers to master.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-11317876063dea24a4abe47d4dbb6237/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-9562aea76052b8e6690596750b666b26/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-134b47130e25f3c688ebd1ab54456e01/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-64f0a7a88d9f4d032dce64679cac0fc3/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-e1ce51abae5188805c3fee78ec7f4d08/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-37cc49a6bdb03b5a4394db84ff264fe5/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "murder-mystery-2",
+    name: "Murder Mystery 2",
+    thumb: "https://tr.rbxcdn.com/180DAY-c929c9ba9069190914f60bbfe47b6cb9/768/432/Image/Webp/noFilter",
+    visits: "21.6B",
+    players: "260K",
+    genre: "Mystery",
+    desc: "One player is the Murderer, one is the Sheriff, and the rest are Innocents. Solve the mystery and collect hundreds of unique knives.",
+    url: "https://www.roblox.com/games/142823291",
+    universeId: 66654135,
+    creator: "Nikilis",
+    maxPlayers: 12,
+    favorites: "21.2M",
+    created: "Jan 2014",
+    longDesc: "Murder Mystery 2 is a classic Roblox deduction game. Each round, one player becomes the Murderer who must eliminate everyone, one player becomes the Sheriff with a gun to stop the Murderer, and the rest are Innocents who must survive and use detective skills. Collect and trade hundreds of unique knives and weapons, unlock rare items, and sharpen your detective instincts across dozens of atmospheric maps.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-c929c9ba9069190914f60bbfe47b6cb9/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-9712501c7ff29c2243d0fd3bfb47d93d/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "grow-a-garden",
+    name: "Grow a Garden",
+    thumb: "https://tr.rbxcdn.com/180DAY-47ade66a6ea80630dc03d2902960dfa6/768/432/Image/Webp/noFilter",
+    visits: "34.7B",
+    players: "147K",
+    genre: "Simulator",
+    desc: "Plant seeds, water them, and watch your garden grow. The fastest-growing game in Roblox history — hit 21.6M concurrent players.",
+    url: "https://www.roblox.com/games/126884695634066",
+    universeId: 7436755782,
+    creator: "The Garden Game",
+    maxPlayers: 4,
+    favorites: "10.4M",
+    created: "Mar 2025",
+    longDesc: "Grow a Garden is a relaxing farming simulator where you plant seeds, water them, and watch your garden grow. Despite its simple concept, it became a worldwide phenomenon — breaking the Guinness World Record for most concurrent players in a video game with 21.6 million simultaneous users in July 2025. Discover rare plants, customize your garden, and enjoy one of the most peaceful experiences on Roblox.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-fb3f7a5400789e05f8c9be73562e792e/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-43a8c215edc93832110b647402eca58d/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-29b5012a99641d4652f60d47c95d5530/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-625f1dfeb6f2ece33525f8c381468b38/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-dfd5c4b9be330985429f3fc1ca499534/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-edd534a57d371273de1f5d94c2b30583/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "survive-lava-for-brainrots",
+    name: "Survive Lava for Brainrots",
+    thumb: "https://tr.rbxcdn.com/180DAY-4377c41bb0aa3b3d8920eef53804524b/768/432/Image/Webp/noFilter",
+    visits: "458M",
+    players: "127K",
+    genre: "Simulator",
+    desc: "Run fast, grab Brainrots, and rush back to your base before rising lava engulfs the map. Rebirth to upgrade jump height and unlock mutations.",
+    url: "https://www.roblox.com/games/119987266683883",
+    universeId: 9649298941,
+    creator: "Johnny Lava",
+    maxPlayers: 5,
+    favorites: "5.5M",
+    created: "Jan 2026",
+    longDesc: "Survive Lava for Brainrots is a fast-paced survival tycoon where you must run into the field, grab as many Brainrots as you can, and rush back to your base before the rising lava engulfs the entire map. Place collected Brainrots in your hub where they generate bucks over time. Rebirth to upgrade your jump height, discover mutations, and unlock new areas. The deeper you go, the rarer the Brainrots.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-6d2d55347139b7334b002f4bc6e728ab/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-86f9e1a9b0049170a7a480f1af8d0d57/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-ae9d681c58933f0b084ac6dfd94aab07/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-9a9359175cfc5b2fcfd50964c9bd111f/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-0c600f401147490a174ee6b850378209/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-7ed183b86543d37e9cd549725df6592e/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "bedwars",
+    name: "BedWars",
+    thumb: "https://tr.rbxcdn.com/180DAY-429586d348e260af2158c21da71f918f/768/432/Image/Webp/noFilter",
+    visits: "11.1B",
+    players: "36K",
+    genre: "Strategy",
+    desc: "Team-based multiplayer where you collect resources, buy gear, and destroy enemy beds to prevent respawning. Last team standing wins.",
+    url: "https://www.roblox.com/games/6872265039",
+    universeId: 2619619496,
+    creator: "Easy.gg",
+    maxPlayers: 40,
+    favorites: "4.4M",
+    created: "May 2021",
+    longDesc: "BedWars is a strategic team-based multiplayer game where your goal is to collect resources to buy gear such as armor and swords for combat. Protect your bed at all costs — once it's destroyed, your team can no longer respawn. Destroy enemy beds and eliminate all opponents to win. Play in solos (1v1), doubles (2v2), squads (4v4), or even 30v30 matches. Regular updates bring new kits, maps, and seasonal content.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-429586d348e260af2158c21da71f918f/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-9e34b6ee9e93b7840f82d1381d14c641/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-994b7ceb365a8e648465ecd4fd955f20/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-2112608ba749b87dbc679d8cf76e9adf/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-b78438e237ef33d3107cfa5300cb1127/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "pls-donate",
+    name: "PLS DONATE",
+    thumb: "https://tr.rbxcdn.com/180DAY-6b031f442d05824c4bcc378d48f5e920/768/432/Image/Webp/noFilter",
+    visits: "4.8B",
+    players: "21K",
+    genre: "Social",
+    desc: "Set up your booth, create gamepasses, and earn Robux from generous donors. A social platform focused on virtual commerce.",
+    url: "https://www.roblox.com/games/8737602449",
+    universeId: 3317679266,
+    creator: "haz3mn",
+    maxPlayers: 28,
+    favorites: "4.1M",
+    created: "Feb 2022",
+    longDesc: "PLS DONATE is a unique social platform where you can earn Robux by creating and selling gamepasses to other players. Set up your personalized booth, write whatever you want on your sign, and interact with the community. Unlike traditional games with objectives, PLS DONATE focuses entirely on social interaction and virtual entrepreneurship. Donate to others or receive donations — it's the Roblox economy in action.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-6b031f442d05824c4bcc378d48f5e920/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-7319163ba94136638f9b59ca6d9fd5f7/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-bf856da3fb1e19a483987162f5617373/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-02604aca57033c3b07c1d3436caf6245/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-8794aa86704027aa344839d600a949d2/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-0088c62851f28049eda300c9aee1ef88/768/432/Image/Webp/noFilter"
+    ]
+  }
+];
+
+// ═══════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════
+function formatNum(n) {
+  if (n >= 1e9) return (n / 1e9).toFixed(1) + 'B';
+  if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+  if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+  return n.toLocaleString();
+}
+
+// ═══════════════════════════════════
+// LIVE STATS
+// ═══════════════════════════════════
+async function fetchLiveStats() {
+  const ids = games.map(g => g.universeId).join(',');
+  try {
+    const res = await fetch('https://games.roproxy.com/v1/games?universeIds=' + ids);
+    if (!res.ok) throw new Error('API error');
+    const data = await res.json();
+    if (data && data.data) {
+      data.data.forEach(d => {
+        const g = games.find(g => g.universeId === d.id);
+        if (g) {
+          g.players = formatNum(d.playing);
+          g.visits = formatNum(d.visits);
+          g.favorites = formatNum(d.favoritedCount);
+          g._livePlaying = d.playing;
+          g._liveVisits = d.visits;
+        }
+      });
+      // Re-sort by live playing count
+      games.sort((a, b) => (b._livePlaying || 0) - (a._livePlaying || 0));
+      // Update date
+      document.getElementById('updated-date').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+      // Re-render current view
+      if (document.getElementById('list-view').classList.contains('active')) {
+        applyFilters();
+      }
+    }
+  } catch (e) {
+    // Fallback: use static data
+    document.getElementById('updated-date').textContent = 'Feb 28, 2026 (static)';
+  }
+}
+
+// ═══════════════════════════════════
+// RENDER LIST
+// ═══════════════════════════════════
+const grid = document.getElementById('games-grid');
+
+function renderCards(list) {
+  grid.innerHTML = '';
+  if (list.length === 0) {
+    grid.innerHTML = '<div class="no-results"><h3>No games found</h3><p>Try a different search or filter</p></div>';
+    return;
+  }
+  list.forEach((g, i) => {
+    const card = document.createElement('div');
+    card.className = 'game-card';
+    card.onclick = () => showDetail(g.slug);
+    card.innerHTML = `
+      <div class="card-thumb-wrapper">
+        <img class="card-thumb" src="${g.thumb}" alt="${g.name}" loading="lazy">
+        <div class="card-thumb-overlay"></div>
+        <div class="card-genre-badge">${g.genre}</div>
+        <div class="card-live-badge"><span class="dot"></span>${g.players}</div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">${g.name}</h3>
+        <p class="card-desc">${g.desc}</p>
+        <div class="card-stats">
+          <div class="card-stat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="card-stat-value" style="color:var(--green)">${g.players}</span>
+            <span class="card-stat-label">playing</span>
+          </div>
+          <div class="card-stat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="card-stat-value">${g.visits}</span>
+            <span class="card-stat-label">visits</span>
+          </div>
+          <div class="card-stat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span class="card-stat-value">${g.favorites}</span>
+            <span class="card-stat-label">favorites</span>
+          </div>
+        </div>
+      </div>`;
+    grid.appendChild(card);
+    setTimeout(() => card.classList.add('visible'), 50 * i);
+  });
+}
+
+// ═══════════════════════════════════
+// FILTERS
+// ═══════════════════════════════════
+const filterTags = document.querySelectorAll('.filter-tag');
+const searchInput = document.getElementById('search-input');
+let activeFilter = 'all';
+
+function applyFilters() {
+  const query = searchInput.value.toLowerCase().trim();
+  const filtered = games.filter(g => {
+    const matchesGenre = activeFilter === 'all' || g.genre === activeFilter;
+    const matchesSearch = !query || g.name.toLowerCase().includes(query) || g.desc.toLowerCase().includes(query) || g.genre.toLowerCase().includes(query);
+    return matchesGenre && matchesSearch;
+  });
+  renderCards(filtered);
+}
+
+filterTags.forEach(tag => {
+  tag.addEventListener('click', () => {
+    filterTags.forEach(t => t.classList.remove('active'));
+    tag.classList.add('active');
+    activeFilter = tag.dataset.filter;
+    applyFilters();
+  });
+});
+searchInput.addEventListener('input', applyFilters);
+
+// ═══════════════════════════════════
+// DETAIL VIEW
+// ═══════════════════════════════════
+function showDetail(slug) {
+  const g = games.find(x => x.slug === slug);
+  if (!g) return;
+
+  window.location.hash = 'game/' + slug;
+  document.getElementById('list-view').classList.remove('active');
+  document.getElementById('detail-view').classList.add('active');
+  window.scrollTo(0, 0);
+
+  document.title = g.name + ' — Mertlox';
+
+  const dc = document.getElementById('detail-content');
+  dc.innerHTML = `
+    <button class="detail-back" onclick="showList()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to all games
+    </button>
+
+    <img class="detail-hero-img" src="${g.thumb}" alt="${g.name}">
+
+    <div class="detail-header">
+      <div class="detail-genre">${g.genre}</div>
+      <h1 class="detail-title">${g.name}</h1>
+      <p class="detail-creator">By <strong>${g.creator}</strong> &middot; Created ${g.created}</p>
+    </div>
+
+    <div class="detail-stats-grid">
+      <div class="detail-stat-card">
+        <div class="val live">${g.players}</div>
+        <div class="lbl">Playing Now</div>
+      </div>
+      <div class="detail-stat-card">
+        <div class="val">${g.visits}</div>
+        <div class="lbl">Total Visits</div>
+      </div>
+      <div class="detail-stat-card">
+        <div class="val">${g.favorites}</div>
+        <div class="lbl">Favorites</div>
+      </div>
+      <div class="detail-stat-card">
+        <div class="val">${g.maxPlayers}</div>
+        <div class="lbl">Max Players</div>
+      </div>
+    </div>
+
+    <a href="${g.url}" target="_blank" rel="noopener" class="detail-play-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      Play on Roblox
+    </a>
+
+    <div class="detail-desc">
+      <h3>About This Game</h3>
+      <p>${g.longDesc}</p>
+    </div>
+
+    <div class="detail-screenshots">
+      <h3>Screenshots</h3>
+      <div class="screenshots-grid">
+        ${g.screenshots.map(s => `<img src="${s}" alt="${g.name} screenshot" loading="lazy" onclick="openLightbox('${s}'); event.stopPropagation();">`).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function showList() {
+  window.location.hash = '';
+  document.getElementById('detail-view').classList.remove('active');
+  document.getElementById('list-view').classList.add('active');
+  document.title = 'Mertlox — The Most Popular Games on Roblox';
+}
+
+// ═══════════════════════════════════
+// LIGHTBOX
+// ═══════════════════════════════════
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// ═══════════════════════════════════
+// HASH ROUTING
+// ═══════════════════════════════════
+function handleRoute() {
+  const hash = window.location.hash;
+  if (hash.startsWith('#game/')) {
+    const slug = hash.replace('#game/', '');
+    showDetail(slug);
+  } else {
+    document.getElementById('detail-view').classList.remove('active');
+    document.getElementById('list-view').classList.add('active');
+  }
+}
+
+window.addEventListener('hashchange', handleRoute);
+
+// ═══════════════════════════════════
+// INIT
+// ═══════════════════════════════════
+document.getElementById('updated-date').textContent = 'loading live data...';
+renderCards(games);
+fetchLiveStats();
+// Refresh live stats once per day
+setInterval(fetchLiveStats, 24 * 60 * 60 * 1000);
+handleRoute();
+</script>
+
+</body>
+</html>
