@@ -209,6 +209,37 @@ nav {
 }
 .screenshots-grid img:hover { transform: scale(1.02); border-color: var(--red); box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
 
+/* VIDEO EMBED */
+.detail-video { margin-bottom: 2rem; }
+.detail-video h3 { font-family: 'Chakra Petch', sans-serif; font-size: 1rem; margin-bottom: 1rem; }
+.video-container {
+  position: relative; width: 100%; max-width: 800px;
+  aspect-ratio: 16/9; border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--border); background: #000;
+}
+.video-container iframe {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: none;
+}
+.video-placeholder {
+  position: relative; width: 100%; height: 100%; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.video-placeholder img {
+  width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5);
+  transition: filter 0.3s;
+}
+.video-placeholder:hover img { filter: brightness(0.35); }
+.video-play-btn {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 68px; height: 48px; opacity: 0.85; transition: opacity 0.3s, transform 0.3s;
+}
+.video-placeholder:hover .video-play-btn { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+.video-label {
+  position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%);
+  font-size: 0.75rem; color: rgba(255,255,255,0.7); font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
 /* LIGHTBOX */
 .lightbox {
   position: fixed; inset: 0; z-index: 2000; background: rgba(0,0,0,0.92);
@@ -275,10 +306,15 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
         <button class="filter-tag" data-filter="Simulator">Simulator</button>
         <button class="filter-tag" data-filter="Action RPG">Action RPG</button>
         <button class="filter-tag" data-filter="Horror">Horror</button>
+        <button class="filter-tag" data-filter="Fighting">Fighting</button>
+        <button class="filter-tag" data-filter="Roleplay">Roleplay</button>
         <button class="filter-tag" data-filter="Social">Social</button>
         <button class="filter-tag" data-filter="FPS">FPS</button>
-        <button class="filter-tag" data-filter="Roleplay">Roleplay</button>
         <button class="filter-tag" data-filter="Strategy">Strategy</button>
+        <button class="filter-tag" data-filter="Creative">Creative</button>
+        <button class="filter-tag" data-filter="Survival">Survival</button>
+        <button class="filter-tag" data-filter="Sports">Sports</button>
+        <button class="filter-tag" data-filter="Obby">Obby</button>
       </div>
     </div>
     <div class="games-grid" id="games-grid"></div>
@@ -594,6 +630,893 @@ const games = [
       "https://tr.rbxcdn.com/180DAY-8794aa86704027aa344839d600a949d2/768/432/Image/Webp/noFilter",
       "https://tr.rbxcdn.com/180DAY-0088c62851f28049eda300c9aee1ef88/768/432/Image/Webp/noFilter"
     ]
+  },
+  {
+    slug: "fish-it",
+    name: "Fish It!",
+    thumb: "https://tr.rbxcdn.com/180DAY-edff90bd01ed8aee72204d5dc26b15bd/768/432/Image/Webp/noFilter",
+    visits: "4.1B",
+    players: "379K",
+    genre: "Simulator",
+    desc: "Cast your line in this fishing adventure — catch rare fish, upgrade gear, and explore stunning ocean biomes with cosmic events.",
+    url: "https://www.roblox.com/games/121864768012064",
+    universeId: 6701277882,
+    creator: "Fish It!",
+    maxPlayers: 20,
+    favorites: "1.1M",
+    created: "Oct 2024",
+    longDesc: "Fish It! is a wildly popular fishing adventure where you cast your line to catch hundreds of unique fish species across diverse biomes. Upgrade your rods, discover secret fishing spots, unlock enchantments, and participate in limited-time cosmic events. With its addictive progression system and constant stream of new content, Fish It! has quickly become one of the most-played games on Roblox.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-edff90bd01ed8aee72204d5dc26b15bd/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-d287da121c458459831219c7cd3cfe96/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-1a5a1325243c65c29f3e9ceea5666475/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-af0da69af39cf40dd9eedd2e078d84a1/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-be35f2073fc57acf2b029d4263e94790/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-600081d81c133f2c6dc8bb52522f2845/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "the-strongest-battlegrounds",
+    name: "The Strongest Battlegrounds",
+    thumb: "https://tr.rbxcdn.com/180DAY-ccd8bcf9f66dc37834534d2cb3cfd1b9/768/432/Image/Webp/noFilter",
+    visits: "17B",
+    players: "133K",
+    genre: "Fighting",
+    desc: "Train and fight others in anime-inspired competitive combat. Available on all devices with intense PvP action.",
+    url: "https://www.roblox.com/games/10449761463",
+    universeId: 3808081382,
+    creator: "Strongest Studios",
+    maxPlayers: 15,
+    favorites: "6.6M",
+    created: "Aug 2022",
+    longDesc: "The Strongest Battlegrounds is a high-octane anime-inspired fighting game where you train hard and battle other players to prove you're the strongest. With fluid combat mechanics, ultimate abilities, and support for all devices including console, PC, and mobile, every fight is intense. Unlock powerful moves, climb the ranks, and dominate the battlegrounds.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-ccd8bcf9f66dc37834534d2cb3cfd1b9/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-6d174abed92eca2a5a9d5320b25fd8be/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-37c53a411395cb017936c8bf0e7b208c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-fcf1b250fcb1e47319ad8c471b32bad6/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "dandys-world",
+    name: "Dandy's World",
+    thumb: "https://tr.rbxcdn.com/180DAY-fbf9cbaec24f63b6f5c294f33634b70d/768/432/Image/Webp/noFilter",
+    visits: "6.1B",
+    players: "114K",
+    genre: "Horror",
+    desc: "A mascot horror survival multiplayer game where you team up with Toons to complete machines and descend deeper into Gardenview Center.",
+    url: "https://www.roblox.com/games/16116270224",
+    universeId: 5569032992,
+    creator: "Dandy's World Studio",
+    maxPlayers: 30,
+    favorites: "3.8M",
+    created: "Jan 2024",
+    longDesc: "Dandy's World is a mascot horror survival multiplayer game where you must team up with fellow Toons to complete machines and descend deeper into Gardenview Center. Each floor brings new challenges, terrifying encounters, and mysteries to uncover. Collect different Toons with unique abilities, work together with friends, and try to survive the horrors lurking within.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-fbf9cbaec24f63b6f5c294f33634b70d/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-511e5c6e680e60d7b068cdff1b94a4d8/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-374a083a46cf9f94ecb3ce4dfa12f33c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-63a91c55122cfc11e901a89bef1ed71a/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-05e0935990b1b457d6a7fa4ee45f2d7f/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-0f5abc8c0c3592a127f8b8c92cb27e32/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "bee-swarm-simulator",
+    name: "Bee Swarm Simulator",
+    thumb: "https://tr.rbxcdn.com/180DAY-d8b8aba149ab05576a05a44283645b53/768/432/Image/Webp/noFilter",
+    visits: "4.2B",
+    players: "108K",
+    genre: "Simulator",
+    desc: "Grow your own swarm of bees, collect pollen, make honey, meet friendly bears, and discover festive Beesmas events.",
+    url: "https://www.roblox.com/games/1537690962",
+    universeId: 601130232,
+    creator: "Onett",
+    maxPlayers: 6,
+    favorites: "6.4M",
+    created: "Mar 2018",
+    longDesc: "Bee Swarm Simulator lets you grow your very own swarm of bees. Collect pollen from flowers scattered across vast fields, convert it to honey, and use your earnings to hatch new bees and unlock powerful gear. Meet friendly bears who give you quests, discover rare gifted bees, and participate in seasonal Beesmas events. With deep progression and a dedicated community, this simulator keeps players coming back for years.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-d8b8aba149ab05576a05a44283645b53/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-8d26dcb333e237ef13ef6e2bf125799e/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-0458177ee998eb2ffd882ad46207e4c5/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "fisch",
+    name: "Fisch",
+    thumb: "https://tr.rbxcdn.com/180DAY-212b54cc2498829a2700e35b13c6318e/768/432/Image/Webp/noFilter",
+    visits: "4.3B",
+    players: "82K",
+    genre: "Simulator",
+    desc: "The ultimate fishing adventure with 400,000+ possible fish variations. Explore biomes, upgrade rods, and discover rare catches.",
+    url: "https://www.roblox.com/games/16732694052",
+    universeId: 5750914919,
+    creator: "Fisch Team",
+    maxPlayers: 20,
+    favorites: "3.2M",
+    created: "Mar 2024",
+    longDesc: "Fisch is the ultimate fishing adventure on Roblox where exploration and progression are yours to control. Cast your line to catch rare and unique fish, each with over 400,000 possible variations. Explore diverse ocean biomes, upgrade your fishing gear, and compete with other anglers. Whether you're after the rarest legendary fish or just enjoying a relaxing day on the water, Fisch has something for everyone.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-212b54cc2498829a2700e35b13c6318e/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-25e167a7d7e6df8e239b7b1cf995a25b/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-bfaee819e2c82a6924afefbc94fb2760/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-1d81cac061bdcd72d50bc61b2f83edc0/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-64bf13267bf29076cc249c8cb9606d0c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-07f4c74a8e33d1c4e106cf89271a1573/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "anime-vanguards",
+    name: "Anime Vanguards",
+    thumb: "https://tr.rbxcdn.com/180DAY-bc06a1e13f31024b1bb791b7ae7165a3/768/432/Image/Webp/noFilter",
+    visits: "1.8B",
+    players: "70K",
+    genre: "Strategy",
+    desc: "Multiple worlds have collided — summon anime-inspired units to fight enemies, save worlds, and build your ultimate team.",
+    url: "https://www.roblox.com/games/16146832113",
+    universeId: 5578556129,
+    creator: "Anime Vanguards",
+    maxPlayers: 24,
+    favorites: "1.8M",
+    created: "Jan 2024",
+    longDesc: "Anime Vanguards is a tower defense game where multiple worlds and universes have collided, and you must summon powerful anime-inspired units to fight off waves of enemies and save these worlds. Collect and upgrade units, discover rare characters, and strategize your placements to defeat increasingly difficult challenges. Embark on a thrilling journey across colliding dimensions.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-bc06a1e13f31024b1bb791b7ae7165a3/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-eb874d84e99d62c10318321b36848f41/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-3b66598f56036101897a7a5eb31fe52c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-f4f1b6547583ffeb85cd659de39482c4/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-71e6cf5bd7290444112926b66b7d295d/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-70b0f3b5700568966e80a553f5702de2/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "berry-avenue-rp",
+    name: "Berry Avenue RP",
+    thumb: "https://tr.rbxcdn.com/180DAY-18acaa29c0b2be9ef3ec11df8118ad4c/768/432/Image/Webp/noFilter",
+    visits: "7.8B",
+    players: "59K",
+    genre: "Roleplay",
+    desc: "A roleplay hangout with stylish houses, cool cars, and roleplay items. Become a student, police officer, or hospital staff.",
+    url: "https://www.roblox.com/games/8481844229",
+    universeId: 3240075297,
+    creator: "Berry Avenue",
+    maxPlayers: 30,
+    favorites: "3.1M",
+    created: "Jan 2022",
+    longDesc: "Berry Avenue RP is a vibrant roleplay and hangout experience where you can choose from stylish houses, drive cool cars, and use roleplay items to create your own stories. Become a student at the local school, work as a police officer, join the hospital staff, or simply hang out with friends. With regular updates bringing new features and locations, Berry Avenue is one of Roblox's most popular roleplay destinations.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-18acaa29c0b2be9ef3ec11df8118ad4c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-3a76289d82e36a8a51e6ec4d4442def2/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-b14de7cdaff9a7a18f263d0e2697334e/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-3dece9f3078d9bfd215b72912ed0e8f4/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-0a91070832d2ae5de95ab2ba3afa7610/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a6368e6a67e0a10f46a002bc93ea59fc/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "evade",
+    name: "Evade",
+    thumb: "https://tr.rbxcdn.com/180DAY-8902e9c2783afdb693c50cc14828828e/768/432/Image/Webp/noFilter",
+    visits: "8.3B",
+    players: "57K",
+    genre: "Horror",
+    desc: "An action parkour horror game where movement is key to surviving the Nextbots. Run, dodge, and survive the chaos.",
+    url: "https://www.roblox.com/games/9872472334",
+    universeId: 3647333358,
+    creator: "Hexatype",
+    maxPlayers: 15,
+    favorites: "7.4M",
+    created: "Jun 2022",
+    longDesc: "Evade is an action parkour horror game where your movement skills are the key to survival. Terrifying Nextbots chase you through various maps, and you must run, dodge, and use tools to survive. With its blend of horror and comedy, featuring meme-inspired antagonists, Evade creates a uniquely chaotic experience. Use new tools, participate in seasonal events, and test your survival skills.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-8902e9c2783afdb693c50cc14828828e/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-275e7d3fd328e2f0059e5e212587efff/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-ce345bc6e164a8b5a75e3f51a84e9709/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-5068d785fba6c10c827b048c9d2ce5e8/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-b369ba8c1f57248e2ce70504b831611b/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-d821274e0ed5dad7e9458e7b5a8d3244/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "creatures-of-sonaria",
+    name: "Creatures of Sonaria",
+    thumb: "https://tr.rbxcdn.com/180DAY-9662c4c0d7b7f1d1f76609df4aa5d25b/768/432/Image/Webp/noFilter",
+    visits: "1.8B",
+    players: "37K",
+    genre: "Survival",
+    desc: "Survive as kaiju-like creatures in a vast open world. Hunt, grow, and evolve in this unique creature survival experience.",
+    url: "https://www.roblox.com/games/5233782396",
+    universeId: 1831550657,
+    creator: "Sonar Studios",
+    maxPlayers: 30,
+    favorites: "2.1M",
+    created: "Feb 2021",
+    longDesc: "Creatures of Sonaria is a creature survival game where you play as unique kaiju-like animals in a vast open world. Hunt prey, avoid predators, grow from a hatchling to a massive creature, and explore diverse biomes. With dozens of species to unlock, each with unique abilities and playstyles, every session offers a different experience. Team up with other creatures or go solo in this breathtaking survival adventure.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-9662c4c0d7b7f1d1f76609df4aa5d25b/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-e1eb452f3da8345a70a0a7ed0129f7a4/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-bc2726b3da5ab22268c7ec592599e4df/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a3220ee6db4b0836d4b7b29364080a20/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-c2cd86f02dd64f61164aa20ed51f55d0/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-9e1be0d7ffc3b7e3f54221c127c48876/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "build-a-boat-for-treasure",
+    name: "Build A Boat For Treasure",
+    thumb: "https://tr.rbxcdn.com/180DAY-402596886e0b7bf6d82a754e88d72554/768/432/Image/Webp/noFilter",
+    visits: "4.9B",
+    players: "27K",
+    genre: "Creative",
+    desc: "Build your ship and set sail through obstacle courses. Creative building meets adventure in this beloved classic.",
+    url: "https://www.roblox.com/games/537413528",
+    universeId: 210851291,
+    creator: "Chillz Studios",
+    maxPlayers: 7,
+    favorites: "8.3M",
+    created: "Nov 2016",
+    longDesc: "Build A Boat For Treasure challenges you to construct the ultimate vessel and navigate it through treacherous obstacle courses. Use hundreds of building blocks and materials to design your ship, then set sail to collect treasure along the way. The further you go, the harder the obstacles become. With its creative freedom and challenging gameplay, this game has entertained millions for years.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-402596886e0b7bf6d82a754e88d72554/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-5872a7e8ba7f615c65a9231b26e9d31a/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-aa9fb045aaf9378a9563600826b1fe95/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-5cc07c05652006d448479ae66212782d/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-44db47d388ed9ee3c0e7a792c2c1a40d/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "jujutsu-infinite",
+    name: "Jujutsu Infinite",
+    thumb: "https://tr.rbxcdn.com/180DAY-24f6fe747331866e96805a04ec33c85a/768/432/Image/Webp/noFilter",
+    visits: "645M",
+    players: "24K",
+    genre: "Fighting",
+    desc: "Master powerful cursed techniques and battle enemies in this Jujutsu Kaisen-inspired fighting RPG available on all devices.",
+    url: "https://www.roblox.com/games/10450270085",
+    universeId: 3808223175,
+    creator: "Jujutsu Infinite",
+    maxPlayers: 12,
+    favorites: "2.6M",
+    created: "Aug 2022",
+    longDesc: "Jujutsu Infinite is an anime fighting RPG inspired by Jujutsu Kaisen. Master powerful cursed techniques, battle cursed spirits, and fight other sorcerers in intense PvP combat. Available on mobile, PC, and console, the game features a deep combat system with combos, ultimates, and special abilities. Participate in limited-time events, unlock rare items, and prove yourself as the strongest sorcerer.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-24f6fe747331866e96805a04ec33c85a/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a83ef15b1c5c0011154ce30e56bb4818/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-3facd0eadc5dd933eb85b366fedac6cd/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-dd076f642f35eed5e0f0f011362910b2/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-f1a067d8757b89be7399f33f583ea42c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-caa7d38a2cea4e9fcd4eda2995179c17/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "blade-ball",
+    name: "Blade Ball",
+    thumb: "https://tr.rbxcdn.com/180DAY-aa0679c96e6ce33f961087cebcc07ce6/768/432/Image/Webp/noFilter",
+    visits: "6B",
+    players: "23K",
+    genre: "Fighting",
+    desc: "A game of focus, timing, and strategy. Deflect a homing ball with increasing speed and gain powerful new abilities.",
+    url: "https://www.roblox.com/games/13772394625",
+    universeId: 4777817887,
+    creator: "Blade Ball",
+    maxPlayers: 16,
+    favorites: "12.1M",
+    created: "Jun 2023",
+    longDesc: "Blade Ball tests your focus, timing, and strategy as a deflectable homing ball hunts players with ever-increasing speed. Time your deflection perfectly to send the ball flying at your opponents. Unlock and upgrade powerful abilities that give you an edge in combat. With its simple-to-learn but hard-to-master gameplay, Blade Ball delivers intense competitive action every round.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-aa0679c96e6ce33f961087cebcc07ce6/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-e355a641b72a9f5c5f0ce52158541b87/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-8685489a5c7f2f2c47bf958801442ab2/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "welcome-to-bloxburg",
+    name: "Welcome to Bloxburg",
+    thumb: "https://tr.rbxcdn.com/180DAY-1cd6ccf2c43a3b4ecdad14722c7da8f5/768/432/Image/Webp/noFilter",
+    visits: "9.8B",
+    players: "23K",
+    genre: "Roleplay",
+    desc: "Build and decorate your dream home, work various jobs, and roleplay in the charming town of Bloxburg.",
+    url: "https://www.roblox.com/games/185655149",
+    universeId: 88070565,
+    creator: "Coeptus",
+    maxPlayers: 12,
+    favorites: "13.8M",
+    created: "Nov 2014",
+    longDesc: "Welcome to Bloxburg is a life simulation game where you can build and decorate your dream home, work various jobs to earn money, customize your character with outfits and roles, and roleplay with friends. The town of Bloxburg offers endless possibilities — from designing elaborate mansions to running your own restaurant. One of Roblox's longest-running hits with a dedicated building community.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-1cd6ccf2c43a3b4ecdad14722c7da8f5/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a01869b92237a7c8f953bb28489ce934/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-8e325ff56c1bd3b6edb441d80b9e9cbc/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-8672e77e3954c1e4759ccb849f2a4c8d/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-2e5843077e7c85dfdce86b58bd0dd724/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-00f4f4b0a3a7537f006bd5a57178c58a/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "blue-lock-rivals",
+    name: "Blue Lock: Rivals",
+    thumb: "https://tr.rbxcdn.com/180DAY-7244e828acc7ae1bff22633d680a76a9/768/432/Image/Webp/noFilter",
+    visits: "4.5B",
+    players: "22K",
+    genre: "Sports",
+    desc: "Anime-inspired competitive soccer with intense 5v5 matches. Enter the world of Blue Lock and become the ultimate striker.",
+    url: "https://www.roblox.com/games/18668065416",
+    universeId: 6325068386,
+    creator: "Blue Lock: Rivals",
+    maxPlayers: 10,
+    favorites: "5.5M",
+    created: "Jul 2024",
+    longDesc: "Blue Lock: Rivals is an anime-inspired competitive soccer game based on the hit Blue Lock series. Enter intense 5v5 matches where individual skill and teamwork collide. Master powerful shots, dribble past defenders, and prove yourself as the ultimate striker. With a 97.6% like rating and over 4.5 billion visits, it's one of the most beloved sports games on Roblox.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-7244e828acc7ae1bff22633d680a76a9/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-f0722e7d2c489b913ba9ed73481cdf18/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a0f4113bd3f4f163dbb1c0e1f09545bb/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-2300694f4be7baacb46b90dd8d713586/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-0067652a4eea3ea5f0540e595d916511/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-0e4f764c44556c90b2bd49db4de5b137/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "pet-simulator-99",
+    name: "Pet Simulator 99!",
+    thumb: "https://tr.rbxcdn.com/180DAY-4241c6db7e937372a71aff9779587018/768/432/Image/Webp/noFilter",
+    visits: "2.3B",
+    players: "19K",
+    genre: "Simulator",
+    desc: "Create an army of 2,000+ unique pets that help you get rich. Equip up to 99 pets and explore endless worlds.",
+    url: "https://www.roblox.com/games/8737899170",
+    universeId: 3317771874,
+    creator: "BIG Games",
+    maxPlayers: 10,
+    favorites: "2.1M",
+    created: "Feb 2022",
+    longDesc: "Pet Simulator 99 lets you create an army of the coolest pets to help you get rich! With over 2,000 pets to collect, you can equip up to 99 pets at once, play mini-games, unlock new worlds, join clans, and trade with other players. Hatch eggs, discover rare and legendary pets, and build the most powerful pet team on Roblox.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-4241c6db7e937372a71aff9779587018/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-451767867d95e535d4f81a1d493e5a2b/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-25b77b4cb49ae9390a08b111a6bff20c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-59a871f1639e5a55e3c49273a0b34d6a/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-d2b270dc7e2dfbfccfb53f97db03f4ee/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "royale-high",
+    name: "Royale High",
+    thumb: "https://tr.rbxcdn.com/180DAY-70b4621b91ca0769c50ff958df4d9494/768/432/Image/Webp/noFilter",
+    visits: "10.4B",
+    players: "19K",
+    genre: "Social",
+    desc: "A magical dream world with fashion, fantasy school, diamond sets, and seasonal halos. One of Roblox's most iconic experiences.",
+    url: "https://www.roblox.com/games/735030788",
+    universeId: 321778215,
+    creator: "callmehbob",
+    maxPlayers: 12,
+    favorites: "13.3M",
+    created: "Apr 2017",
+    longDesc: "Royale High is a magical fantasy school experience featuring stunning fashion, seasonal halos, diamond sets, and enchanting worlds. Attend classes, customize your character with thousands of accessories, trade rare items, and explore beautifully designed realms. With regular seasonal updates and a passionate community, Royale High remains one of Roblox's most iconic and beloved experiences.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-70b4621b91ca0769c50ff958df4d9494/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-7a00837cd16e4f7f6dd60d967cda16d8/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-23345f581d7c465e88d5fdbed6f4cb72/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-77b164497652db565d4d434481128e96/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-d8ab31cb5a34b5afe33ce157050038ef/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-31764441a3a69ee935b656fac784f079/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "slap-battles",
+    name: "Slap Battles",
+    thumb: "https://tr.rbxcdn.com/180DAY-01bb43634d02e38923c1543a029c95d5/768/432/Image/Webp/noFilter",
+    visits: "3.4B",
+    players: "18K",
+    genre: "Fighting",
+    desc: "Slap opponents into oblivion using different gloves with unique abilities. Chaotic, hilarious, and endlessly fun.",
+    url: "https://www.roblox.com/games/6403373529",
+    universeId: 2380077519,
+    creator: "Tencell",
+    maxPlayers: 16,
+    favorites: "4.2M",
+    created: "Feb 2021",
+    longDesc: "Slap Battles is a chaotic PvP game about slapping people into oblivion using different gloves, each with unique and often absurd abilities. From gloves that create black holes to ones that summon lightning, the variety of powers keeps every match unpredictable. Collect badges, unlock new gloves, and cause maximum chaos in this hilariously entertaining experience.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-01bb43634d02e38923c1543a029c95d5/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-19515499a3c632716341785bd565a1b6/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-423e8a72ee6437bb5081e1e98ba71079/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-785e3585b2f255f34610e30c1f48c68b/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-6203f4311886ecbc836e8cd1cfab9aa3/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-60eb7c6c62e307274e4c47f3d46754a7/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "doors",
+    name: "DOORS",
+    thumb: "https://tr.rbxcdn.com/180DAY-14df5c19faa7ad5d5b14ddd49720eaed/768/432/Image/Webp/noFilter",
+    visits: "7.2B",
+    players: "17K",
+    genre: "Horror",
+    desc: "Navigate through procedurally generated rooms, solve puzzles, and avoid terrifying entities in this first-person horror hit.",
+    url: "https://www.roblox.com/games/6516141723",
+    universeId: 2440500124,
+    creator: "LSPLASH",
+    maxPlayers: 50,
+    favorites: "7.7M",
+    created: "Mar 2021",
+    longDesc: "DOORS is a first-person horror game where you navigate through procedurally generated rooms while solving puzzles and avoiding terrifying entities. Each door could lead to safety or danger — learn the behaviors of each entity to survive. With its atmospheric design, daily runs, and new Battle Mode, DOORS delivers a thrilling horror experience that has captivated over 7 billion visits.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-14df5c19faa7ad5d5b14ddd49720eaed/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-ac6d2b831ee486c141dfd677af0cabcb/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-32f3e1bdc99b2b6759303326667df43b/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-af2d9b55dbc9b730d098c2fbc60902f5/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-423c8579e8e0ea4716e30b7b90fc91ca/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-c561035883caed090885a5f3311338b4/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "tower-defense-simulator",
+    name: "Tower Defense Simulator",
+    thumb: "https://tr.rbxcdn.com/180DAY-be9d5d290a36d5a45f8296338b1c6a78/768/432/Image/Webp/noFilter",
+    visits: "4.6B",
+    players: "16K",
+    genre: "Strategy",
+    desc: "Place units to defend against hordes of zombies. Team up with friends to face bosses and unlock powerful new towers.",
+    url: "https://www.roblox.com/games/3260590327",
+    universeId: 1176784616,
+    creator: "Paradoxum Games",
+    maxPlayers: 50,
+    favorites: "3.4M",
+    created: "Jun 2019",
+    longDesc: "Tower Defense Simulator challenges you to place strategic units to defend against increasingly powerful hordes of zombies. Team up with friends to face stronger bosses and unlock new, more powerful units. With seasonal events, limited-time skins, and deep strategic gameplay, every match requires careful planning and teamwork to survive.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-be9d5d290a36d5a45f8296338b1c6a78/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-af66744bd3f86b889b2a635458b2ea86/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-681c428716104c1dfce714a88c11c615/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-62353f0db70f968377d9c6cdc75dec85/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "tower-of-hell",
+    name: "Tower of Hell",
+    thumb: "https://tr.rbxcdn.com/180DAY-20a372111085c33de1e64004e4dca1d8/768/432/Image/Webp/noFilter",
+    visits: "27.5B",
+    players: "16K",
+    genre: "Obby",
+    desc: "Race to the top of randomly generated obstacle towers with no checkpoints. A true test of parkour skill and speed.",
+    url: "https://www.roblox.com/games/1962086868",
+    universeId: 703124385,
+    creator: "YXCeptional Studios",
+    maxPlayers: 20,
+    favorites: "11.6M",
+    created: "Jun 2018",
+    longDesc: "Tower of Hell is the ultimate obby challenge where you must race to the top of randomly generated obstacle towers with absolutely no checkpoints. Each round presents a unique tower made of random sections, testing your parkour skills, reflexes, and speed. Compete against other players in timed rounds, unlock trail effects, and prove you can conquer the most punishing towers on Roblox.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-20a372111085c33de1e64004e4dca1d8/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-31286b9f84384b6b82988caa2d0b7cca/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-bbf77e96d2fb7c31af7f37d07df52a62/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "jailbreak",
+    name: "Jailbreak",
+    thumb: "https://tr.rbxcdn.com/180DAY-c102aff6e1852ba0953ebd2967f6dcc1/768/432/Image/Webp/noFilter",
+    visits: "7.8B",
+    players: "16K",
+    genre: "Action RPG",
+    desc: "A 12-time award-winning game. Orchestrate robberies or catch criminals in this open-world cops-and-robbers experience.",
+    url: "https://www.roblox.com/games/606849621",
+    universeId: 245662005,
+    creator: "Badimo",
+    maxPlayers: 30,
+    favorites: "18.5M",
+    created: "Jan 2017",
+    longDesc: "Jailbreak is a 12-time award-winning open-world game where you can orchestrate daring robberies or enforce the law as a police officer. Team up with friends for elaborate heists, chase down criminals in high-speed vehicle pursuits, and explore a vast city filled with secrets. With regular seasonal updates bringing new vehicles, robberies, and features, Jailbreak continues to be one of Roblox's most iconic games.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-c102aff6e1852ba0953ebd2967f6dcc1/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-616f3da26a52b2b032276dfdcec84271/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-87548c619bad26335d9f1a2ff37021d8/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-cd69b8cd92a4512bca8aad2cb3b826d4/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-7b6a4191a5123fb6ae2a3084953dd442/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-fef285ce1b8ac805b17da2a4f998ccec/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "piggy",
+    name: "Piggy",
+    thumb: "https://tr.rbxcdn.com/180DAY-9a6167eabc17cccd69511f6213e94b03/768/432/Image/Webp/noFilter",
+    visits: "14.1B",
+    players: "15K",
+    genre: "Horror",
+    desc: "Episodic escape-room horror with puzzle-solving while evading Piggy. Features a story-driven campaign across multiple seasons.",
+    url: "https://www.roblox.com/games/4623386862",
+    universeId: 1516533665,
+    creator: "MiniToon",
+    maxPlayers: 6,
+    favorites: "12M",
+    created: "Jan 2020",
+    longDesc: "Piggy is an episodic survival horror game combining escape-room puzzle mechanics with a gripping storyline. Each chapter challenges you to find keys, solve puzzles, and escape before Piggy catches you. With multiple seasons of story content, mystery skin quests, and dozens of atmospheric maps, Piggy has become one of Roblox's most beloved horror experiences with over 14 billion visits.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-9a6167eabc17cccd69511f6213e94b03/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-edcb871030cdc48da918cd1dd15daddf/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-b21d683a15cc00da8380a2fdd0527ef7/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-90339bbefb69d8dea280dae0032dfd8a/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-200833db32b5e7e3f70eee5338a7173d/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "emergency-hamburg",
+    name: "Emergency Hamburg",
+    thumb: "https://tr.rbxcdn.com/180DAY-0624db414b1d9fe07c20b7b0ee00d881/768/432/Image/Webp/noFilter",
+    visits: "1.2B",
+    players: "15K",
+    genre: "Roleplay",
+    desc: "Emergency services roleplay in the city of Hamburg. Be a police officer, firefighter, medic, bus driver, or criminal.",
+    url: "https://www.roblox.com/games/7711635737",
+    universeId: 2992873140,
+    creator: "Emergency Hamburg",
+    maxPlayers: 44,
+    favorites: "891K",
+    created: "Oct 2021",
+    longDesc: "Emergency Hamburg is a detailed emergency services roleplaying game set in the German city of Hamburg. Choose from multiple roles including police officer, firefighter, medic, bus driver, car mechanic, truck driver, or criminal. Each role offers unique gameplay mechanics and responsibilities. Drive realistic vehicles, respond to emergencies, and interact with a vibrant community of players.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-0624db414b1d9fe07c20b7b0ee00d881/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-1b1a4a72859565ca819155dc40169f90/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-843aad689ce3dc6632129c0d0ca22505/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-95af142f6ab04b08b6d639089dd1a37e/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-18d11729d93a2679394d62c566054552/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a36caeb7804c8b7231e3c401b193510e/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "king-legacy",
+    name: "King Legacy",
+    thumb: "https://tr.rbxcdn.com/180DAY-da431c483c048ebaba0c0caeb17d5770/768/432/Image/Webp/noFilter",
+    visits: "3.9B",
+    players: "10K",
+    genre: "Action RPG",
+    desc: "One Piece-inspired RPG with a level cap of 5000. Find physical devil fruits, master combat, and sail the seas.",
+    url: "https://www.roblox.com/games/4520749081",
+    universeId: 1451439645,
+    creator: "Venture Lagoons",
+    maxPlayers: 12,
+    favorites: "2.7M",
+    created: "Dec 2019",
+    longDesc: "King Legacy is an anime-inspired action RPG set in a vast ocean world. Inspired by One Piece, it features a level cap of 5000, 41 physical devil fruits that spawn on the map, extensive combat systems, and epic boss battles. Sail between islands, discover powerful abilities, team up with friends, and become the ultimate pirate king in this massive adventure.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-da431c483c048ebaba0c0caeb17d5770/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-d629b59f1921f7eae8bd7be585a95d2b/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-03b21fe50f64f7208c816c253c264359/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "natural-disaster-survival",
+    name: "Natural Disaster Survival",
+    thumb: "https://tr.rbxcdn.com/180DAY-40fe0f5c013d768b2025dd90653fdae9/768/432/Image/Webp/noFilter",
+    visits: "4.1B",
+    players: "9K",
+    genre: "Survival",
+    desc: "Survive 13 different natural disasters across 23 maps. A beloved Roblox classic since 2008 that never gets old.",
+    url: "https://www.roblox.com/games/189707",
+    universeId: 65241,
+    creator: "Stickmasterluke",
+    maxPlayers: 30,
+    favorites: "11.5M",
+    created: "Mar 2008",
+    longDesc: "Natural Disaster Survival is one of Roblox's oldest and most iconic games. Survive up to 13 different natural disasters including tsunamis, tornadoes, earthquakes, and volcanic eruptions across 23 unique maps. Each round brings a random disaster, and your goal is simple: survive. With its timeless gameplay and simple premise, this classic continues to entertain millions of players.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-40fe0f5c013d768b2025dd90653fdae9/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-9f575a51b4cc7756d5b1ad1313d81269/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-7a251de36154e44366734d25c115b823/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-ee8d832362b34a0f3457464b079af65b/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-05fb4dab60ba585793425280cd2bbb8f/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-e64483d51a31609112927ef7b4863c1f/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "the-forge",
+    name: "The Forge",
+    thumb: "https://tr.rbxcdn.com/180DAY-897c6bd9aea157370f2cadb3dfa2cdad/768/432/Image/Webp/noFilter",
+    visits: "994M",
+    players: "9K",
+    genre: "Action RPG",
+    desc: "An RPG about mining, forging, and fighting. Each ore combination creates unique designs with distinct traits.",
+    url: "https://www.roblox.com/games/76558904092080",
+    universeId: 7671049560,
+    creator: "The Forge",
+    maxPlayers: 12,
+    favorites: "958K",
+    created: "May 2025",
+    longDesc: "The Forge is an RPG and simulation game about mining, forging, and fighting. Each ore combination you forge creates a weapon with a unique design and distinct traits. Mine resources deep underground, craft powerful weapons and armor, and battle enemies with your custom builds. Create your own unique playstyle and dominate the forge.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-897c6bd9aea157370f2cadb3dfa2cdad/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-e47db535c583057ca8ad7670d3649b44/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-3eacda24071591b5157449a853e8b24c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-b67a6d2a7734aae7d05f9d5db9f1f434/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a513dc538145e44951d86c775fcaa45c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-c8d5b065c72279ce1ec2e60a23e8f3cb/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "work-at-a-pizza-place",
+    name: "Work at a Pizza Place",
+    thumb: "https://tr.rbxcdn.com/180DAY-1ec5f77e4ac9e65ed0f19500a262e9c0/768/432/Image/Webp/noFilter",
+    visits: "5.4B",
+    players: "8K",
+    genre: "Social",
+    desc: "Work as a team to fulfill pizza orders and upgrade your house with earnings. A timeless Roblox classic since 2008.",
+    url: "https://www.roblox.com/games/192800",
+    universeId: 47545,
+    creator: "Dued1",
+    maxPlayers: 12,
+    favorites: "13.2M",
+    created: "Mar 2008",
+    longDesc: "Work at a Pizza Place is one of Roblox's longest-running hits. Work as a team to fulfill food orders at the pizza parlor, taking on roles like cashier, cook, boxer, delivery driver, or supplier. Use your earnings to upgrade and customize your house with furniture and decorations. With its cooperative gameplay and charming simplicity, this classic has earned over 5 billion visits.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-1ec5f77e4ac9e65ed0f19500a262e9c0/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-e8ea57bc0042a71b7b6de1e0d8d551e5/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-80afe29527e70d8b55e507cb61093098/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-6941df37ecac26f0e0a1063ba46f725d/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-1942887d395bcc49cafcb4e2715d2f42/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-7f1d51a97b4023e3cfbef315baa0ecab/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "deepwoken",
+    name: "Deepwoken",
+    thumb: "https://tr.rbxcdn.com/180DAY-0d58b293b1c4e24c6eafe3d27c69eddd/768/432/Image/Webp/noFilter",
+    visits: "1.5B",
+    players: "7K",
+    genre: "Action RPG",
+    desc: "An ambitious RPG with permadeath, skill-based combat, deep lore, and extensive character progression in a mysterious world.",
+    url: "https://www.roblox.com/games/4111023553",
+    universeId: 1359573625,
+    creator: "Monad Studios",
+    maxPlayers: 30,
+    favorites: "982K",
+    created: "Oct 2019",
+    longDesc: "Deepwoken is an ambitious RPG featuring permanent character death, deep lore, and skill-based combat. Every story is yours to tell in this mysterious world where danger lurks around every corner. With extensive character progression, diverse builds, and a richly detailed world to explore, Deepwoken offers one of the most hardcore and rewarding RPG experiences on Roblox.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-0d58b293b1c4e24c6eafe3d27c69eddd/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-7053be5db281295340bdfad4a0b0723e/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-5ec49f02fb5236f4e46846f8dd45aa90/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-6d62538593d51c52f053b3f1abd74dfb/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-d177c7eac0819945b192053f195df690/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "bubble-gum-simulator-infinity",
+    name: "Bubble Gum Simulator INFINITY",
+    thumb: "https://tr.rbxcdn.com/180DAY-a6ea476b3f66ae73ee3979a53d218302/768/432/Image/Webp/noFilter",
+    visits: "580M",
+    players: "7K",
+    genre: "Simulator",
+    desc: "Blow bubble gum, jump into clouds, discover sky islands, hatch rare pets, and compete in bubble competitions.",
+    url: "https://www.roblox.com/games/85896571713843",
+    universeId: 6504986360,
+    creator: "Rumble Studios",
+    maxPlayers: 12,
+    favorites: "277K",
+    created: "Sep 2024",
+    longDesc: "Bubble Gum Simulator INFINITY takes the beloved bubble gum formula to new heights. Blow massive bubbles to increase your jump height and reach the clouds, where you'll discover hidden sky islands full of secrets. Hatch rare pets from eggs, fuse machine pets, take part in bubble competitions, and explore a colorful world of endless possibilities.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-a6ea476b3f66ae73ee3979a53d218302/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a2ba7bbf285c22673a926511daee5158/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-23a0e530c0914687a81ed54bc1507c36/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-b9cd25a8fe8b866cae79e781379ed330/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-d8729425aa463679e4a0a4e8445bc62a/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-3e90591acd85907cb93b8b8232a2e901/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "arsenal",
+    name: "Arsenal",
+    thumb: "https://tr.rbxcdn.com/180DAY-b6a5183f24ba3121346cf7e274da12ec/768/432/Image/Webp/noFilter",
+    visits: "6.2B",
+    players: "6K",
+    genre: "FPS",
+    desc: "Fast-paced arcade FPS with a massive arsenal of weapons — from bazookas to spell books. Race to the top of the leaderboard.",
+    url: "https://www.roblox.com/games/286090429",
+    universeId: 111958650,
+    creator: "ROLVe Community",
+    maxPlayers: 16,
+    favorites: "11.5M",
+    created: "Aug 2015",
+    longDesc: "Arsenal is a fast-paced arcade FPS where you race to the top through a massive arsenal of weapons. From bazookas to spell books, each weapon keeps you guessing what's next. With stylish kill animations, dozens of unique weapons, and competitive gameplay, Arsenal delivers non-stop action. Earn BattleBucks to unlock skins, emotes, and other cosmetics.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-b6a5183f24ba3121346cf7e274da12ec/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-6bb1a9706475489833d58dc1a21d1c69/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a8abe703dec5b81538e04a714ab7dca4/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-87014ccb1849a3f6b71d674419ddff1f/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-532924dd719a28a243e1450087cc1f17/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-ac48650a254cdd674b875e0af459c9f2/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "combat-warriors",
+    name: "Combat Warriors",
+    thumb: "https://tr.rbxcdn.com/180DAY-e72ccbcc082df05d32f77e484a685418/768/432/Image/Webp/noFilter",
+    visits: "1.4B",
+    players: "4K",
+    genre: "Fighting",
+    desc: "Intense melee and ranged weapon combat emphasizing timing, parries, and combos in brutal PvP battles.",
+    url: "https://www.roblox.com/games/4282985734",
+    universeId: 1390601379,
+    creator: "SweetBlox Studios",
+    maxPlayers: 45,
+    favorites: "2.3M",
+    created: "Nov 2019",
+    longDesc: "Combat Warriors is an intense PvP fighting game featuring melee and ranged weapons with deep combat mechanics. Master timing, parries, and combos to dominate your opponents. With polearm skills, sword techniques, and ranged utilities, every fight demands skill and strategy. Regular updates bring new weapons, abilities, and gameplay modes.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-e72ccbcc082df05d32f77e484a685418/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-3e930b16aa240db7470e6416718fb4dc/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-7d546e5cfd840c68711930583059426e/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-5688c0e317a8f6900dc4c7305f0f45d6/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-2359f74bf4b9e4fc8c2980f17559cb4b/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-d591116c1659db2a4ac5b61506ed7744/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "shindo-life",
+    name: "Shindo Life",
+    thumb: "https://tr.rbxcdn.com/180DAY-fd2a28a90c3a7df65c8b046b7650caa7/768/432/Image/Webp/noFilter",
+    visits: "2.6B",
+    players: "4K",
+    genre: "Action RPG",
+    desc: "Naruto-inspired RPG with vast worlds, spirit battles, and hundreds of abilities and awakenings to unlock.",
+    url: "https://www.roblox.com/games/4616652839",
+    universeId: 1511883870,
+    creator: "RELL World",
+    maxPlayers: 5,
+    favorites: "3M",
+    created: "Jan 2020",
+    longDesc: "Shindo Life is a Naruto-inspired action RPG where you explore vast worlds, play various game modes, and battle powerful spirits. Unlock and randomize hundreds of abilities and awakenings, each with unique visual effects and combat mechanics. With mini-games, boss fights, and deep customization, Shindo Life offers an expansive anime RPG experience.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-fd2a28a90c3a7df65c8b046b7650caa7/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-2e291af885a57284dd95baaa6f89d8ee/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-f677eea7081dc2c4ebbc45b22754607a/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-fcb97c7b28fe001de347a8e4b56364fd/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-bf2b09e7676334e0fb53aaf16c6651da/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-e46c6da81c03a8e3555e124fc9bd6db1/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "phantom-forces",
+    name: "Phantom Forces",
+    thumb: "https://tr.rbxcdn.com/180DAY-5269484ec3fd78ec695ba07a05372a39/768/432/Image/Webp/noFilter",
+    visits: "1.8B",
+    players: "3K",
+    genre: "FPS",
+    desc: "A polished tactical FPS with thousands of weapon loadouts, hundreds of attachments, and full weapon customization.",
+    url: "https://www.roblox.com/games/292439477",
+    universeId: 113491250,
+    creator: "StyLiS Studios",
+    maxPlayers: 32,
+    favorites: "5.9M",
+    created: "Aug 2015",
+    longDesc: "Phantom Forces is one of Roblox's most polished FPS experiences, featuring thousands of possible weapon loadouts with full customization including hundreds of attachments and skins. Available on both PC and console, the game offers tactical team-based gameplay across multiple game modes and maps. With its realistic gunplay and deep weapon system, Phantom Forces sets the standard for shooters on Roblox.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-5269484ec3fd78ec695ba07a05372a39/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-c6e119fbb8b2cf6efdfb8391e2c132ad/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-77b655b3443da3ea626b7a4057bd211c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-1b770bff261a4c44c90952e9263a82e0/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-3b65767ce33cf8887593761e61507caa/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-e0ef77dd22ced466eb0bf2a3d72381be/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "anime-defenders",
+    name: "Anime Defenders",
+    thumb: "https://tr.rbxcdn.com/180DAY-9a7bda8a192a498a4ceeee3b14843620/768/432/Image/Webp/noFilter",
+    visits: "3.4B",
+    players: "1K",
+    genre: "Strategy",
+    desc: "Recruit anime-inspired heroes and deploy them strategically to fight off waves of enemies across themed locations.",
+    url: "https://www.roblox.com/games/17017769292",
+    universeId: 5836869368,
+    creator: "Anime Defenders",
+    maxPlayers: 30,
+    favorites: "910K",
+    created: "Apr 2024",
+    longDesc: "Anime Defenders is a tower defense game where you recruit your favorite anime-inspired heroes and deploy them strategically to fight off waves of enemies. Each unit has unique abilities that can be activated during battle. Progress through story mode and various game modes set in locations inspired by popular anime settings. Summon powerful units, upgrade your roster, and become the ultimate defender.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-9a7bda8a192a498a4ceeee3b14843620/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-38ad187bcae9a6d2c9c259679ccf5740/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "meepcity",
+    name: "MeepCity",
+    thumb: "https://tr.rbxcdn.com/180DAY-8d7d220c927ef2be12d05d9ed11f579e/768/432/Image/Webp/noFilter",
+    visits: "16.3B",
+    players: "158",
+    genre: "Social",
+    desc: "Chat, play games, earn coins, and customize your estate. A classic Roblox social hangout with millions of lifetime players.",
+    url: "https://www.roblox.com/games/370731277",
+    universeId: 140239261,
+    creator: "alexnewtron",
+    maxPlayers: 40,
+    favorites: "14.8M",
+    created: "Feb 2016",
+    longDesc: "MeepCity is a classic Roblox social experience where you can chat with friends, play mini-games, earn coins, and customize your very own estate. Adopt adorable Meeps as pets, decorate your home with thousands of furniture items, and enjoy a vibrant social atmosphere. With over 16 billion visits, MeepCity remains one of the most visited games in Roblox history.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-8d7d220c927ef2be12d05d9ed11f579e/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-4963fd585d6324e6d70bbe54c876928c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-d3a55b6b2f36d4125f5f560c37563d51/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-5cbdfc0b238311e39adc9dfcef510566/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-8a98c6e37b98d2f1c75fccd36e20579e/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-adcb3de6041396e28eb5d045b65b71b7/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "sols-rng",
+    name: "Sol's RNG",
+    thumb: "https://tr.rbxcdn.com/180DAY-46aace1b5a354073d07024c3f6037737/768/432/Image/Webp/noFilter",
+    visits: "1.7B",
+    players: "48K",
+    genre: "Simulator",
+    desc: "A unique RNG-based experience featuring boss raids, aura rolling, and collection mechanics. Test your luck and grind for rare drops.",
+    url: "https://www.roblox.com/games/15532962292",
+    universeId: 5361032378,
+    creator: "Sol's RNG",
+    maxPlayers: 20,
+    favorites: "891K",
+    created: "Mar 2024",
+    longDesc: "Sol's RNG is a unique luck-based experience where you roll for rare auras, participate in boss raids, and collect increasingly powerful items. The thrill of RNG keeps every session exciting — will you get the rarest aura in the game? With boss raids, trading, and deep progression systems, Sol's RNG has built a massive and dedicated community.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-46aace1b5a354073d07024c3f6037737/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-166c79cd29583c821fbda90d79826977/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-febb6fa141fb181fdd1bae6da9e7a24c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-1c246e98b6641c8f319135a2a4752865/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-928c2b449d7472f7e60b1662662beaaa/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-c6b37d8159cc92700a5ab46e520f2580/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "theme-park-tycoon-2",
+    name: "Theme Park Tycoon 2",
+    thumb: "https://tr.rbxcdn.com/180DAY-f2486ba6848d0507da2511b01e2d4889/768/432/Image/Webp/noFilter",
+    visits: "1.5B",
+    players: "6K",
+    genre: "Creative",
+    desc: "Design and build your dream theme park with rides, coasters, shops, and decorations. A beloved classic since 2012.",
+    url: "https://www.roblox.com/games/69184822",
+    universeId: 31970568,
+    creator: "Den_S",
+    maxPlayers: 6,
+    favorites: "6M",
+    created: "Jan 2012",
+    longDesc: "Theme Park Tycoon 2 lets you design and build your ultimate dream theme park from scratch. Place thrilling roller coasters, exciting rides, food shops, and beautiful decorations to attract visitors and earn money. With an incredible building system that gives you full creative control, you can create anything from a small carnival to a massive world-class theme park. One of Roblox's most enduring classics.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-f2486ba6848d0507da2511b01e2d4889/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-43ce23701dc7af2de45af720b32caf0c/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-97b6cbded02134782badb78c53d19b1f/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-06ae0323149adca8ee217882bb2062df/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-19d37e8208a9d390075158433face2cd/768/432/Image/Webp/noFilter"
+    ]
+  },
+  {
+    slug: "ninja-legends",
+    name: "Ninja Legends",
+    thumb: "https://tr.rbxcdn.com/180DAY-ab8c57696ef6e04fc608f0603fa02f8a/768/432/Image/Webp/noFilter",
+    visits: "2.1B",
+    players: "2K",
+    genre: "Simulator",
+    desc: "Train to become the ultimate ninja warrior. Collect powerful pets, unlock elemental islands, and master ancient techniques.",
+    url: "https://www.roblox.com/games/3956818381",
+    universeId: 1335695570,
+    creator: "Scriptbloxian Studios",
+    maxPlayers: 6,
+    favorites: "4.7M",
+    created: "Nov 2019",
+    longDesc: "Ninja Legends is an action-packed simulator where you train to become the ultimate ninja warrior. Swing your sword to earn Chi, collect powerful ninja pets that fight alongside you, unlock elemental islands with unique powers, and master ancient techniques. With its satisfying progression loop, epic boss battles, and constant updates, Ninja Legends delivers an exciting ninja fantasy.",
+    screenshots: [
+      "https://tr.rbxcdn.com/180DAY-ab8c57696ef6e04fc608f0603fa02f8a/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-c368dd7c94f2d9b4a8e9bd420dec80c8/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-ab056b75ad635c010b3081161f3594fb/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-697deba19107a2b2bc191aa8f3694f94/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-a8f96cf2ba5c53a3bbad27c11b881b70/768/432/Image/Webp/noFilter",
+      "https://tr.rbxcdn.com/180DAY-6bc15ed629bab09093ef8e446810df88/768/432/Image/Webp/noFilter"
+    ]
   }
 ];
 
@@ -775,6 +1698,19 @@ function showDetail(slug) {
       <p>${g.longDesc}</p>
     </div>
 
+    <div class="detail-video">
+      <h3>Gameplay Video</h3>
+      <div class="video-container">
+        <div class="video-placeholder" id="video-placeholder" onclick="loadVideo(this, '${g.name} Roblox gameplay')">
+          <img src="${g.thumb}" alt="Watch ${g.name} gameplay" loading="lazy">
+          <div class="video-play-btn">
+            <svg viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.64 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#FF0000"/><path d="M45 24L27 14v20" fill="#fff"/></svg>
+          </div>
+          <div class="video-label">Click to load video</div>
+        </div>
+      </div>
+    </div>
+
     <div class="detail-screenshots">
       <h3>Screenshots</h3>
       <div class="screenshots-grid">
@@ -802,6 +1738,35 @@ function closeLightbox() {
   document.getElementById('lightbox').classList.remove('open');
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// ═══════════════════════════════════
+// VIDEO EMBED
+// ═══════════════════════════════════
+async function loadVideo(placeholder, query) {
+  const container = placeholder.parentElement;
+  placeholder.querySelector('.video-label').textContent = 'Loading video...';
+  const searchQuery = encodeURIComponent(query);
+  // Try Piped API (CORS-friendly YouTube proxy) to find a video
+  const apis = ['https://pipedapi.kavin.rocks', 'https://pipedapi.adminforge.de'];
+  for (const api of apis) {
+    try {
+      const res = await fetch(api + '/search?q=' + searchQuery + '&filter=videos');
+      if (!res.ok) continue;
+      const data = await res.json();
+      const vid = data.items && data.items.find(i => i.type === 'stream' && i.url);
+      if (vid) {
+        const videoId = vid.url.replace('/watch?v=', '');
+        container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        return;
+      }
+    } catch(e) { continue; }
+  }
+  // Fallback: link to YouTube search
+  container.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:100%;flex-direction:column;gap:1rem;">
+    <p style="color:var(--text-secondary);font-size:0.9rem;">Could not load video automatically</p>
+    <a href="https://www.youtube.com/results?search_query=${searchQuery}" target="_blank" rel="noopener" style="background:var(--red);color:white;padding:0.6rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.85rem;">Watch on YouTube →</a>
+  </div>`;
+}
 
 // ═══════════════════════════════════
 // HASH ROUTING
