@@ -239,6 +239,17 @@ nav {
   font-size: 0.75rem; color: rgba(255,255,255,0.7); font-weight: 500;
   letter-spacing: 0.5px;
 }
+.mertlox-badge {
+  display: inline-block; background: var(--green); color: #fff; font-size: 0.65rem;
+  padding: 0.15rem 0.5rem; border-radius: 4px; text-transform: uppercase;
+  letter-spacing: 1px; font-weight: 700; margin-right: 0.5rem; vertical-align: middle;
+}
+.mertlox-channel-link {
+  display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem;
+  color: var(--text-secondary); font-size: 0.8rem; text-decoration: none;
+  transition: color 0.2s;
+}
+.mertlox-channel-link:hover { color: #FF0000; }
 
 /* LIGHTBOX */
 .lightbox {
@@ -285,6 +296,7 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   </a>
   <ul class="nav-links">
     <li><a href="#" onclick="showList(); return false;">Games</a></li>
+    <li><a href="https://www.youtube.com/@MertloxTank" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>YouTube</a></li>
     <li><a href="https://www.roblox.com/charts" target="_blank" rel="noopener" class="nav-cta">Roblox Charts</a></li>
   </ul>
 </nav>
@@ -471,6 +483,7 @@ const games = [
   {
     slug: "rivals",
     name: "Rivals",
+    videoId: "rUf7HOyZU_c",
     thumb: "https://tr.rbxcdn.com/180DAY-60c154f21752ff4cb520340183edb77a/768/432/Image/Webp/noFilter",
     visits: "12.2B",
     players: "434K",
@@ -1699,8 +1712,14 @@ function showDetail(slug) {
     </div>
 
     <div class="detail-video">
-      <h3>Gameplay Video</h3>
-      <div class="video-container">
+      <h3>${g.videoId ? '<span class="mertlox-badge">Mertlox Video</span> Our Review' : 'Gameplay Video'}</h3>
+      ${g.videoId
+        ? `<div class="video-container"><iframe src="https://www.youtube.com/embed/${g.videoId}?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+           <a href="https://www.youtube.com/@MertloxTank" target="_blank" rel="noopener" class="mertlox-channel-link">
+             <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+             Subscribe to Mertlox for more gameplay videos
+           </a>`
+        : `<div class="video-container">
         <div class="video-placeholder" id="video-placeholder" onclick="loadVideo(this, '${g.name} Roblox gameplay')">
           <img src="${g.thumb}" alt="Watch ${g.name} gameplay" loading="lazy">
           <div class="video-play-btn">
@@ -1708,7 +1727,7 @@ function showDetail(slug) {
           </div>
           <div class="video-label">Click to load video</div>
         </div>
-      </div>
+      </div>`}
     </div>
 
     <div class="detail-screenshots">
