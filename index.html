@@ -1598,9 +1598,12 @@ function renderCards(list) {
     return;
   }
   list.forEach((g, i) => {
+    const link = document.createElement('a');
+    link.href = '/games/' + g.slug + '/';
+    link.style.textDecoration = 'none';
+    link.style.color = 'inherit';
     const card = document.createElement('div');
     card.className = 'game-card';
-    card.onclick = () => showDetail(g.slug);
     card.innerHTML = `
       <div class="card-thumb-wrapper">
         <img class="card-thumb" src="${g.thumb}" alt="${g.name}" loading="lazy">
@@ -1629,7 +1632,8 @@ function renderCards(list) {
           </div>
         </div>
       </div>`;
-    grid.appendChild(card);
+    link.appendChild(card);
+    grid.appendChild(link);
     setTimeout(() => card.classList.add('visible'), 50 * i);
   });
 }
@@ -1801,12 +1805,13 @@ async function loadVideo(placeholder, query) {
 function handleRoute() {
   const hash = window.location.hash;
   if (hash.startsWith('#game/')) {
+    // Redirect old hash URLs to real pages
     const slug = hash.replace('#game/', '');
-    showDetail(slug);
-  } else {
-    document.getElementById('detail-view').classList.remove('active');
-    document.getElementById('list-view').classList.add('active');
+    window.location.href = '/games/' + slug + '/';
+    return;
   }
+  document.getElementById('detail-view').classList.remove('active');
+  document.getElementById('list-view').classList.add('active');
 }
 
 window.addEventListener('hashchange', handleRoute);
