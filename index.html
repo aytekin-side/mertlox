@@ -274,9 +274,42 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
-footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
-.footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
+footer { padding: 2.5rem clamp(1.5rem,4vw,3rem) 2rem; text-align: center; border-top: 1px solid var(--border); }
+.footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 1rem; }
+.footer-categories { margin-bottom: 1.25rem; }
+.footer-categories h4 { font-family: 'Chakra Petch', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-dim); margin-bottom: 0.6rem; }
+.footer-cat-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; }
+.footer-cat-links a {
+  padding: 0.3rem 0.7rem; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 6px; color: var(--text-secondary); font-size: 0.72rem; font-weight: 500;
+  text-decoration: none; transition: all 0.2s;
+}
+.footer-cat-links a:hover { border-color: var(--red); color: var(--red); background: rgba(255,26,26,0.05); }
 .footer-line { font-size: 0.72rem; color: var(--text-dim); line-height: 1.8; }
 .footer-line a { color: var(--red); text-decoration: none; }
 .footer-line a:hover { text-decoration: underline; }
@@ -354,6 +387,24 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
 
 <footer>
   <div class="footer-brand">Mert<span style="color:#22C55E">lox</span></div>
+  <div class="footer-categories">
+    <h4>Browse by Category</h4>
+    <div class="footer-cat-links">
+      <a href="/category/simulator/">Simulator</a>
+      <a href="/category/action-rpg/">Action RPG</a>
+      <a href="/category/horror/">Horror</a>
+      <a href="/category/fighting/">Fighting</a>
+      <a href="/category/roleplay/">Roleplay</a>
+      <a href="/category/social/">Social</a>
+      <a href="/category/fps/">FPS</a>
+      <a href="/category/strategy/">Strategy</a>
+      <a href="/category/creative/">Creative</a>
+      <a href="/category/survival/">Survival</a>
+      <a href="/category/sports/">Sports</a>
+      <a href="/category/obby/">Obby</a>
+      <a href="/category/mystery/">Mystery</a>
+    </div>
+  </div>
   <p class="footer-line">
     Data sourced from <a href="https://www.rolimons.com/games" target="_blank" rel="noopener">Rolimon's</a> &amp; <a href="https://www.roblox.com/charts" target="_blank" rel="noopener">Roblox Charts</a>. Not affiliated with Roblox Corporation.
   </p>
