@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Anime Vanguards is a tower defense game where multiple worlds and universes have collided, and you must summon powerful anime-inspired units to fight off waves of enemies and save these worlds. Collect and upgrade units, discover rare characters, and strategize your placements to defeat increasingly difficult challenges. Embark on a thrilling journey across colliding dimensions.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Anime Vanguards Blended Tower Defense With Gacha</h4>
+        <p>The game combined strategic tower defense gameplay with an anime-inspired character gacha system, creating an addictive loop of collecting and deploying heroes. This fusion appealed to both strategy fans and anime collectors, broadening its audience significantly.</p>
+      </div>
+      <div class="story-card">
+        <h4>New Unit Banners Created Massive Hype Cycles</h4>
+        <p>Each time the developers released a new powerful unit, the community erupted with tier list debates, summoning videos, and strategy discussions. These banner drops functioned similarly to gacha game events, driving spending and engagement spikes.</p>
+      </div>
+      <div class="story-card">
+        <h4>Hardcore Players Competed for Leaderboard Supremacy</h4>
+        <p>An endgame leaderboard system encouraged dedicated players to optimize their unit compositions and strategies to clear the most difficult waves. Top players gained recognition within the community and their strategies were studied and replicated.</p>
+      </div>
+      <div class="story-card">
+        <h4>Content Creators Fueled Rapid Growth</h4>
+        <p>Roblox YouTubers produced extensive content covering unit reviews, tier lists, and challenge runs that introduced the game to wider audiences. These videos served as both entertainment and practical guides, creating a content ecosystem that sustained player acquisition.</p>
+      </div>
+      <div class="story-card">
+        <h4>Frequent Balancing Kept the Meta Evolving</h4>
+        <p>The developers regularly adjusted unit stats and abilities to prevent any single strategy from dominating indefinitely. While some players found the frequent changes frustrating, the shifting meta kept theorycrafting alive and encouraged experimentation with different team compositions.</p>
+      </div>
     </div>
 
     

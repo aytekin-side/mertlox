@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Pet Simulator 99 lets you create an army of the coolest pets to help you get rich! With over 2,000 pets to collect, you can equip up to 99 pets at once, play mini-games, unlock new worlds, join clans, and trade with other players. Hatch eggs, discover rare and legendary pets, and build the most powerful pet team on Roblox.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>BIG Games Perfected the Pet Collection Formula</h4>
+        <p>Pet Simulator 99 launched as the latest iteration in BIG Games' wildly successful Pet Simulator franchise, immediately drawing millions of players. The game refined years of iteration on collection and upgrade mechanics into the most polished entry yet.</p>
+      </div>
+      <div class="story-card">
+        <h4>Number Inflation Reached Astronomical Proportions</h4>
+        <p>The game became famous for its absurdly large damage and currency numbers, with players dealing damage in the quintillions and beyond. This deliberate design choice of ever-escalating numbers proved psychologically satisfying and became a signature characteristic of the franchise.</p>
+      </div>
+      <div class="story-card">
+        <h4>Huge Cat Became an Iconic Roblox Mascot</h4>
+        <p>The Huge Cat and other massive pet variants became some of the most recognizable and sought-after items in all of Roblox gaming. Trading for Huge pets developed into a serious economy with dedicated value tracking websites and Discord servers.</p>
+      </div>
+      <div class="story-card">
+        <h4>Real-World Merchandise Extended the Brand</h4>
+        <p>BIG Games expanded Pet Simulator into physical merchandise including toys and collectibles, bridging the gap between virtual and real-world collecting. The merchandise launches generated significant excitement and brought new players to the game through retail store discovery.</p>
+      </div>
+      <div class="story-card">
+        <h4>Update Frequency Set Industry Standards</h4>
+        <p>BIG Games maintained a relentless update schedule for Pet Simulator 99, dropping new areas, pets, and events with remarkable consistency. This cadence set expectations across the Roblox platform and demonstrated how sustained content delivery could maintain a massive player base.</p>
+      </div>
     </div>
 
     

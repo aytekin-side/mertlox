@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>The Forge is an RPG and simulation game about mining, forging, and fighting. Each ore combination you forge creates a weapon with a unique design and distinct traits. Mine resources deep underground, craft powerful weapons and armor, and battle enemies with your custom builds. Create your own unique playstyle and dominate the forge.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Mining and Crafting RPG Launched Strong in 2025</h4>
+        <p>The Forge arrived on Roblox in 2025 with a compelling gameplay loop centered on mining ores, forging weapons, and battling enemies. The game quickly attracted a dedicated player base drawn to its satisfying progression system and crafting depth. Its polished launch set it apart from many other new Roblox RPGs.</p>
+      </div>
+      <div class="story-card">
+        <h4>Deep Crafting System Appealed to Hardcore RPG Fans</h4>
+        <p>The Forge's forging mechanics went beyond simple crafting, requiring players to learn recipes, manage resources, and experiment with material combinations. This depth attracted RPG enthusiasts who craved more complexity than typical Roblox games offered. The system rewarded knowledge and experimentation, creating a strong incentive for community collaboration.</p>
+      </div>
+      <div class="story-card">
+        <h4>Player-Driven Economy Emerged Around Rare Materials</h4>
+        <p>Rare ores and legendary crafting materials in The Forge quickly became valuable commodities, with players developing informal trading networks. The scarcity of high-tier materials created natural economic dynamics that added a metagame layer beyond the core mining and forging loop. Some players specialized entirely in trading, becoming merchant characters within the game's world.</p>
+      </div>
+      <div class="story-card">
+        <h4>Community Guides Became Essential for New Players</h4>
+        <p>The Forge's complexity led to a thriving community of guide creators who documented crafting recipes, ore locations, and optimal progression paths. YouTube tutorials and wiki pages became essential reading for new players trying to navigate the game's systems. This knowledge-sharing community became one of the game's most valuable assets.</p>
+      </div>
+      <div class="story-card">
+        <h4>Regular Content Updates Expanded the Underground World</h4>
+        <p>The development team consistently added new biomes, ore types, and forging recipes to keep the experience fresh. Each update pushed players deeper into the underground world, revealing new challenges and rewards. The steady content cadence helped The Forge build momentum throughout its first year on the platform.</p>
+      </div>
     </div>
 
     

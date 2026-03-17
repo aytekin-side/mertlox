@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Grow a Garden is a relaxing farming simulator where you plant seeds, water them, and watch your garden grow. Despite its simple concept, it became a worldwide phenomenon — breaking the Guinness World Record for most concurrent players in a video game with 21.6 million simultaneous users in July 2025. Discover rare plants, customize your garden, and enjoy one of the most peaceful experiences on Roblox.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Grow a Garden Peaks at 22.3 Million Concurrent Players</h4>
+        <p>In August 2025, Grow a Garden hit an astonishing 22.3 million concurrent players, smashing Fortnite's previous all-time peak of 15.3 million. The gardening simulator went from a quiet March 2025 launch to one of the biggest games on any platform in just five months.</p>
+      </div>
+      <div class="story-card">
+        <h4>Film Adaptation Announced by Story Kitchen</h4>
+        <p>In November 2025, Story Kitchen — the production company behind Sonic and Tomb Raider adaptations — announced a film deal with Grow a Garden's creators. Co-founders Dmitri M. Johnson and Michael Lawrence Goldberg cited the game's imaginative and heartfelt world as the perfect setting for a theatrical feature.</p>
+      </div>
+      <div class="story-card">
+        <h4>32 Billion Plays and 9.5 Million Favorites</h4>
+        <p>As of October 2025, Grow a Garden has amassed over 32 billion plays and approximately 9.5 million favorites on Roblox. The game's explosive growth helped drive Roblox's revenue up 36% year-over-year, with the platform specifically crediting Grow a Garden as a key contributor.</p>
+      </div>
+      <div class="story-card">
+        <h4>St. Patrick's Day Event Brings Leprechauns to the Garden</h4>
+        <p>The St. Patrick's Day event launched on March 14, 2026, featuring a leprechaun character hanging around the event space surrounded by pots of gold. The week-long seasonal celebration added themed collectibles and continued the game's tradition of regular holiday content updates.</p>
+      </div>
+      <div class="story-card">
+        <h4>Weekly Saturday Updates Since Day One</h4>
+        <p>Since its March 2025 launch, Grow a Garden has maintained a weekly update schedule with new content dropping every Saturday UTC. The Black Buttercup update on January 31, 2026 introduced a new plant variation alongside collectibles and Pets, exemplifying the steady content flow that keeps millions of players engaged.</p>
+      </div>
     </div>
 
     

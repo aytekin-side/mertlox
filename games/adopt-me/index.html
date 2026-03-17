@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Adopt Me! is one of the biggest games ever made on Roblox. Adopt and raise a huge variety of adorable pets — from common dogs and cats to ultra-rare legendary creatures. Trade with millions of other players, decorate your dream home, explore themed worlds, and roleplay with friends. Regular updates bring new pets, seasonal events, and exciting features that keep millions coming back every day.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Adopt Me Surpasses 40 Billion Visits</h4>
+        <p>As of late 2025, Adopt Me has accumulated over 40.8 billion visits, making it one of the most-visited experiences in Roblox history. The pet adoption RPG developed by Uplift Games continues to draw millions of daily players years after its initial launch.</p>
+      </div>
+      <div class="story-card">
+        <h4>Sugarfest: Game of Sweets Kicks Off Spring 2026</h4>
+        <p>On March 13, 2026, Adopt Me launched its Sugarfest: Game of Sweets update, a four-week spring celebration featuring a new limited-time minigame and event currency. New content drops weekly through April 10, giving players fresh pets and items to collect each week.</p>
+      </div>
+      <div class="story-card">
+        <h4>Lunar New Year 2026 Celebrates Year of the Horse</h4>
+        <p>Adopt Me's Lunar New Year 2026 update introduced Year of the Horse-themed pets, mini games, and exclusive rewards. The seasonal event continued the game's tradition of culturally inspired celebrations that have become fan-favorite annual traditions.</p>
+      </div>
+      <div class="story-card">
+        <h4>1.92 Million Concurrent Player Record Stood for Three Years</h4>
+        <p>On April 16, 2021, Adopt Me reached 1.92 million concurrent players during the Ocean Egg launch, a record that stood for over three years. The milestone was not surpassed by any Roblox game until Blox Fruits claimed the title in December 2024, highlighting just how dominant Adopt Me was during its peak.</p>
+      </div>
+      <div class="story-card">
+        <h4>Pet Releaser Update Shakes Up Gameplay</h4>
+        <p>The February 2026 Pet Releaser Changes update introduced the Dire Wolf and brought back the limited-edition Giant Panda alongside a new Tickets currency system. The update overhauled how players manage their pet collections, adding new strategic depth to the adoption experience.</p>
+      </div>
     </div>
 
     

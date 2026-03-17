@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Welcome to Bloxburg is a life simulation game where you can build and decorate your dream home, work various jobs to earn money, customize your character with outfits and roles, and roleplay with friends. The town of Bloxburg offers endless possibilities — from designing elaborate mansions to running your own restaurant. One of Roblox's longest-running hits with a dedicated building community.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Paid Access Game Still Earned Billions of Visits</h4>
+        <p>Welcome to Bloxburg defied conventional wisdom by charging Robux for entry and still becoming one of Roblox's most visited games with billions of visits. The paid access model actually became a selling point, as players felt it created a more committed and mature community.</p>
+      </div>
+      <div class="story-card">
+        <h4>Building System Rivals Professional Design Tools</h4>
+        <p>Bloxburg's advanced building mode became so sophisticated that players created stunningly realistic mansions, restaurants, and entire neighborhoods. The game essentially functions as an accessible architectural design tool, with dedicated builders spending hundreds of hours perfecting single homes.</p>
+      </div>
+      <div class="story-card">
+        <h4>Roleplay Community Developed Its Own Culture</h4>
+        <p>A massive roleplay community emerged within Bloxburg, with players establishing families, running businesses, and creating elaborate social scenarios. This organic social gameplay extended far beyond the developers' original vision and became the primary draw for millions of players.</p>
+      </div>
+      <div class="story-card">
+        <h4>Years-Long Beta Became a Running Joke</h4>
+        <p>Welcome to Bloxburg remained in beta for years despite being one of Roblox's most polished and popular games. The extended beta status became a beloved community meme, with players joking that the game would never officially launch while simultaneously praising its regular updates.</p>
+      </div>
+      <div class="story-card">
+        <h4>Pizza Delivery Job Became Iconic Roblox Moment</h4>
+        <p>The game's pizza delivery job became one of the most recognizable activities in all of Roblox, with players grinding deliveries to fund their dream homes. The simple work-to-build gameplay loop proved incredibly satisfying and inspired numerous other Roblox life simulation games.</p>
+      </div>
     </div>
 
     

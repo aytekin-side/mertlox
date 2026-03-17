@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>King Legacy is an anime-inspired action RPG set in a vast ocean world. Inspired by One Piece, it features a level cap of 5000, 41 physical devil fruits that spawn on the map, extensive combat systems, and epic boss battles. Sail between islands, discover powerful abilities, team up with friends, and become the ultimate pirate king in this massive adventure.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>One Piece Inspiration Drew Massive Anime Fan Base</h4>
+        <p>King Legacy tapped into the enormous global popularity of One Piece by offering players the chance to find Devil Fruits and sail the seas. The game attracted millions of anime fans who wanted to live out their pirate fantasies on Roblox. Its faithful adaptation of One Piece mechanics like fruit powers and naval combat kept fans deeply engaged.</p>
+      </div>
+      <div class="story-card">
+        <h4>Fruit Trading Economy Became Incredibly Competitive</h4>
+        <p>The Devil Fruit trading system in King Legacy developed into one of the most active player economies on Roblox. Rare mythical fruits commanded enormous value, and players spent hours server-hopping to find them. Dedicated trading communities formed on Discord, with constantly updated tier lists tracking fruit values.</p>
+      </div>
+      <div class="story-card">
+        <h4>Major Updates Introduced New Seas and Boss Fights</h4>
+        <p>King Legacy's development team maintained player interest through massive updates that added new seas, islands, and powerful boss encounters. Each update effectively doubled the available content, giving both new and veteran players fresh goals to pursue. The scale of these updates rivaled those of standalone RPGs outside the Roblox platform.</p>
+      </div>
+      <div class="story-card">
+        <h4>Competed Fiercely With Blox Fruits for Dominance</h4>
+        <p>King Legacy and Blox Fruits engaged in an ongoing rivalry for supremacy in Roblox's One Piece-inspired game category. Both games constantly pushed each other to deliver bigger updates, better mechanics, and more content. This competition ultimately benefited players, who enjoyed a steady stream of improvements from both titles.</p>
+      </div>
+      <div class="story-card">
+        <h4>Game Consistently Maintained Top Roblox Player Counts</h4>
+        <p>King Legacy regularly appeared in Roblox's top games by concurrent player count, often hosting tens of thousands of simultaneous players. Its staying power in such a competitive space demonstrated the enduring appeal of anime-inspired RPGs on the platform. The game's consistent performance made it one of the most reliable revenue generators in the One Piece game niche.</p>
+      </div>
     </div>
 
     

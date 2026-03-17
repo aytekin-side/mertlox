@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Shindo Life is a Naruto-inspired action RPG where you explore vast worlds, play various game modes, and battle powerful spirits. Unlock and randomize hundreds of abilities and awakenings, each with unique visual effects and combat mechanics. With mini-games, boss fights, and deep customization, Shindo Life offers an expansive anime RPG experience.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Copyright Strike Forced Complete Game Rebrand</h4>
+        <p>Originally called Shinobi Life 2, the game was hit with a copyright takedown from the Naruto franchise rights holders in late 2020. Developer RELL World had to quickly rebrand to Shindo Life, removing direct Naruto references while preserving the gameplay. The incident became one of the most high-profile IP disputes in Roblox history and a cautionary tale for anime-inspired developers.</p>
+      </div>
+      <div class="story-card">
+        <h4>Bloodline System Created Deep Character Customization</h4>
+        <p>Shindo Life's bloodline system, featuring hundreds of unique abilities inspired by anime powers, gave players extraordinary depth in character building. Rare bloodlines with low spawn rates became intensely sought after, with players spending hours rolling for the perfect abilities. The system created a rich meta-game around team composition and ability synergies.</p>
+      </div>
+      <div class="story-card">
+        <h4>Private Server Codes Built Unique Community Culture</h4>
+        <p>The game's private server system spawned a massive culture of players sharing server codes to access specific bosses and spawn locations. Dedicated communities on YouTube, Discord, and Twitter revolved around distributing fresh codes daily. This code-sharing ecosystem became central to the Shindo Life experience and kept engagement levels remarkably high.</p>
+      </div>
+      <div class="story-card">
+        <h4>Frequent Updates Delivered Staggering Content Volume</h4>
+        <p>RELL World maintained an aggressive update schedule that added new bloodlines, maps, weapons, and bosses at a pace few Roblox games could match. Major updates would often arrive weekly, giving players constant reasons to return. This relentless content pipeline helped Shindo Life maintain strong concurrent player counts over multiple years.</p>
+      </div>
+      <div class="story-card">
+        <h4>Game Reached Over Two Billion Visits Milestone</h4>
+        <p>Shindo Life surpassed two billion total visits, making it one of the most successful anime-inspired games on the Roblox platform. The achievement was especially impressive given that the game had to essentially restart its momentum after the forced rebrand. Its sustained popularity demonstrated the enormous demand for anime RPG experiences among Roblox's player base.</p>
+      </div>
     </div>
 
     

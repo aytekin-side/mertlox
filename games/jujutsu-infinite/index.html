@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Jujutsu Infinite is an anime fighting RPG inspired by Jujutsu Kaisen. Master powerful cursed techniques, battle cursed spirits, and fight other sorcerers in intense PvP combat. Available on mobile, PC, and console, the game features a deep combat system with combos, ultimates, and special abilities. Participate in limited-time events, unlock rare items, and prove yourself as the strongest sorcerer.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Anime Fans Flocked to Faithful Adaptation</h4>
+        <p>Jujutsu Infinite captured the Jujutsu Kaisen anime's combat system with remarkable accuracy, featuring domain expansions, cursed techniques, and iconic character abilities. The game quickly climbed Roblox's charts as anime game fans praised its fluid combat and faithful source material representation.</p>
+      </div>
+      <div class="story-card">
+        <h4>Domain Expansion Mechanic Wowed the Community</h4>
+        <p>The implementation of domain expansions as dramatic in-game ultimates became the game's signature feature, with each technique receiving a cinematic animation sequence. Players shared clips of these moments across social media, driving massive organic growth for the game.</p>
+      </div>
+      <div class="story-card">
+        <h4>Competitive PvP Scene Emerged Rapidly</h4>
+        <p>A dedicated competitive community formed around the game's PvP modes, with players developing tier lists and combo guides for different cursed techniques. Unofficial tournaments organized through Discord attracted hundreds of participants and viewers.</p>
+      </div>
+      <div class="story-card">
+        <h4>Manga Updates Drove Rapid Game Content</h4>
+        <p>The developers maintained an impressive pace of adding new characters and abilities to coincide with manga and anime releases. When major Jujutsu Kaisen story arcs concluded, corresponding in-game events and character additions kept players engaged and excited.</p>
+      </div>
+      <div class="story-card">
+        <h4>Server Capacity Issues Plagued Early Launch</h4>
+        <p>The game's explosive popularity at launch led to severe server congestion, with players waiting in long queues just to enter. The development team had to rapidly scale their infrastructure and optimize code to handle concurrent player counts that far exceeded their initial projections.</p>
+      </div>
     </div>
 
     

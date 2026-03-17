@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Anime Defenders is a tower defense game where you recruit your favorite anime-inspired heroes and deploy them strategically to fight off waves of enemies. Each unit has unique abilities that can be activated during battle. Progress through story mode and various game modes set in locations inspired by popular anime settings. Summon powerful units, upgrade your roster, and become the ultimate defender.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Anime Tower Defense Exploded in Popularity Fast</h4>
+        <p>Anime Defenders rocketed up the Roblox charts shortly after its release, capitalizing on the massive demand for anime-themed tower defense games. The game attracted hundreds of thousands of concurrent players within its first months, competing directly with established titles in the genre. Its rapid growth demonstrated that the anime tower defense niche was far from saturated.</p>
+      </div>
+      <div class="story-card">
+        <h4>Unit Gacha System Drove Intense Player Engagement</h4>
+        <p>The game's gacha-style unit summoning system, featuring characters inspired by popular anime series, created an addictive loop of rolling for rare and powerful defenders. Ultra-rare units with extremely low drop rates became the ultimate prizes that players spent extensive time trying to obtain. The system sparked both excitement and debate about gacha mechanics in games aimed at younger audiences.</p>
+      </div>
+      <div class="story-card">
+        <h4>Regular Updates Added New Anime-Inspired Characters</h4>
+        <p>The development team maintained a rapid content schedule, regularly introducing new units inspired by characters from trending anime series. Each update generated buzz on social media as players speculated about which anime would be referenced next. This steady stream of recognizable characters kept the community engaged and attracted fans from various anime fandoms.</p>
+      </div>
+      <div class="story-card">
+        <h4>Trading Community Emerged Around Rare Units</h4>
+        <p>A robust trading economy developed as players sought to exchange duplicate rare units for ones they were missing from their collections. Discord servers dedicated to Anime Defenders trading grew to tens of thousands of members. The trading meta added a social dimension that extended engagement well beyond the core tower defense gameplay.</p>
+      </div>
+      <div class="story-card">
+        <h4>Competitive Leaderboards Pushed Strategic Depth Forward</h4>
+        <p>End-game content and competitive leaderboards challenged players to optimize their unit compositions and placement strategies for maximum efficiency. Top players developed and shared intricate strategies for clearing the hardest waves with specific team compositions. This competitive layer transformed what could have been a casual experience into a deeply strategic one.</p>
+      </div>
     </div>
 
     

@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Jailbreak is a 12-time award-winning open-world game where you can orchestrate daring robberies or enforce the law as a police officer. Team up with friends for elaborate heists, chase down criminals in high-speed vehicle pursuits, and explore a vast city filled with secrets. With regular seasonal updates bringing new vehicles, robberies, and features, Jailbreak continues to be one of Roblox's most iconic games.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Won the First Roblox Innovation Award in 2018</h4>
+        <p>Jailbreak took home the inaugural Roblox Innovation Award for Game of the Year, cementing its status as a defining experience on the platform. The award recognized both its innovative gameplay and its massive cultural impact on the Roblox community. Developers Badcc and Asimo3089 accepted the honor as teenagers, highlighting Roblox's power to launch young creators.</p>
+      </div>
+      <div class="story-card">
+        <h4>Reached One Million Concurrent Players at Launch</h4>
+        <p>When Jailbreak first launched in 2017, it shattered Roblox concurrent player records by drawing enormous crowds eager to play cops and robbers. The game's open-world design and vehicle-based gameplay felt genuinely fresh on the platform. Its explosive debut signaled a new era for the ambition and scale possible in Roblox games.</p>
+      </div>
+      <div class="story-card">
+        <h4>Regular Seasonal Updates Kept the Game Evolving</h4>
+        <p>Badimo maintained Jailbreak's relevance through consistent seasonal updates that added new vehicles, heists, and map changes. Major updates like the addition of the Volcano Criminal Base and underwater areas dramatically transformed the gameplay experience. This commitment to ongoing development set a standard that other Roblox games aspired to match.</p>
+      </div>
+      <div class="story-card">
+        <h4>Hyperchrome Vehicles Created Trading Frenzy Among Players</h4>
+        <p>The introduction of rare Hyperchrome vehicle skins created an explosive trading economy within the Jailbreak community. Some of the rarest Hyperchromes became status symbols, with players spending enormous amounts of time grinding to obtain them. The feature added a collector's dimension to the game that extended engagement far beyond the core cops-and-robbers gameplay.</p>
+      </div>
+      <div class="story-card">
+        <h4>Live In-Game Events Drew Massive Audiences</h4>
+        <p>Jailbreak pioneered live in-game events on Roblox, including a dramatic reveal where an entire volcano erupted and reshaped the map. These events created shared moments that players talked about for months afterward, generating huge spikes in viewership on YouTube. The approach demonstrated that Roblox games could create the same kind of event-driven excitement as major console titles.</p>
+      </div>
     </div>
 
     

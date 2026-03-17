@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Tower of Hell is the ultimate obby challenge where you must race to the top of randomly generated obstacle towers with absolutely no checkpoints. Each round presents a unique tower made of random sections, testing your parkour skills, reflexes, and speed. Compete against other players in timed rounds, unlock trail effects, and prove you can conquer the most punishing towers on Roblox.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Zero Checkpoints Made It Uniquely Punishing</h4>
+        <p>Tower of Hell distinguished itself from other obby games by removing all checkpoints, meaning a single mistake could send players back to the bottom. This brutal design choice created intense moments of tension and triumph that made the game wildly popular on YouTube and TikTok. The format turned every successful climb into a genuine achievement worth celebrating.</p>
+      </div>
+      <div class="story-card">
+        <h4>Game Reached Over Twenty Billion Visits</h4>
+        <p>Tower of Hell became one of the most visited games in Roblox history, surpassing twenty billion visits and regularly maintaining hundreds of thousands of concurrent players. Its simple premise and infinitely replayable randomly-generated towers gave it extraordinary staying power. The game proved that a straightforward concept executed well could rival the biggest titles on the platform.</p>
+      </div>
+      <div class="story-card">
+        <h4>Randomly Generated Towers Kept Players Coming Back</h4>
+        <p>Each round in Tower of Hell generates a unique tower by stacking randomly selected obstacle sections, ensuring no two rounds are identical. This procedural generation system was key to the game's longevity, as players could never fully memorize the course. The design became influential, inspiring numerous other Roblox obby games to adopt similar randomization.</p>
+      </div>
+      <div class="story-card">
+        <h4>Pro Players Completed Towers in Under Sixty Seconds</h4>
+        <p>Speedrunning Tower of Hell became a competitive pursuit, with elite players finishing entire towers in astonishingly short times. Videos of players flawlessly navigating obstacles at breakneck speed went viral, accumulating millions of views. The speedrunning community developed advanced techniques like precise jump angles that casual players could only dream of replicating.</p>
+      </div>
+      <div class="story-card">
+        <h4>YXCeptional Studios Built an Obby Empire</h4>
+        <p>Developer YXCeptional Studios leveraged Tower of Hell's success to become one of the most recognized development groups on Roblox. The game's revenue demonstrated that simple, well-designed casual experiences could be enormously profitable on the platform. Their success story inspired a wave of independent developers to create their own twist on the obby genre.</p>
+      </div>
     </div>
 
     

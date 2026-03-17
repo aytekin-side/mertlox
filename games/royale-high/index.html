@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Royale High is a magical fantasy school experience featuring stunning fashion, seasonal halos, diamond sets, and enchanting worlds. Attend classes, customize your character with thousands of accessories, trade rare items, and explore beautifully designed realms. With regular seasonal updates and a passionate community, Royale High remains one of Roblox's most iconic and beloved experiences.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Callmehbob Built a Fashion RPG Empire</h4>
+        <p>Royale High grew from a simple high school roleplay game into one of Roblox's most elaborate fashion and fantasy RPGs, accumulating billions of visits. Developer callmehbob's vision of combining dress-up gameplay with RPG elements created a genre-defining experience on the platform.</p>
+      </div>
+      <div class="story-card">
+        <h4>Trading Economy Rivaled Real-World Markets</h4>
+        <p>Royale High's item trading economy became extraordinarily sophisticated, with rare halos and limited items valued at millions of in-game diamonds. The economy grew so complex that dedicated trading hubs, value charts, and even inflation tracking emerged within the community.</p>
+      </div>
+      <div class="story-card">
+        <h4>Seasonal Events Became Must-Play Experiences</h4>
+        <p>The game's elaborate seasonal events for Halloween, Christmas, Valentine's Day, and other holidays became anticipated community traditions. Each event introduced new realms to explore, exclusive items to earn, and storylines that kept players returning year after year.</p>
+      </div>
+      <div class="story-card">
+        <h4>Halo Items Achieved Legendary Status</h4>
+        <p>Halo accessories, awarded through rare fountain story choices during seasonal events, became Royale High's most prestigious items. The extremely low drop rates made halos status symbols, and some vintage halos became so scarce that they topped every value list in the community.</p>
+      </div>
+      <div class="story-card">
+        <h4>Developer Donated Proceeds to Real Charities</h4>
+        <p>Callmehbob used Royale High's massive platform to raise awareness and funds for real-world charitable causes. Special in-game events tied to charity drives demonstrated how Roblox games could have positive real-world impact beyond entertainment.</p>
+      </div>
     </div>
 
     

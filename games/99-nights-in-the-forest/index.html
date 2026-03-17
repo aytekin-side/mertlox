@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>99 Nights in the Forest is a horror survival experience where you must defend your camp, rescue four missing children, and survive against dangerous creatures lurking in the dark woods. Hostile enemies including The Deer, Cultists, and The Owl frequently appear and attack if you're outside the safe zone. The campfire acts like a magical shield — as long as you remain within its light, you are protected. Gather resources like wood, coal, and meat to survive, and choose from 23 unique classes including production, combat, support, and exploration. Inspired by a real-life incident involving four children who survived a 2023 plane crash and lived in the jungle for over 40 days.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Jungle Biome Expansion Brings New Horrors</h4>
+        <p>The Jungle Biome Part 2 update launched on March 7, 2026, introducing a terrifying new entity called The Cat — a black, slender feline that pounces on highlighted locations. The update also added the Fighting Pit, a hidden Colosseum-style arena deep within the jungle where players battle waves of Cultists and Boars for rare rewards.</p>
+      </div>
+      <div class="story-card">
+        <h4>Three Friends Built a Horror Hit in Three Months</h4>
+        <p>99 Nights in the Forest was created by Grandma's Favourite Games, a small studio owned by Cracky4 and built by just three friends. The game was developed in a sprint of three months and has since surpassed 25 billion total visits on Roblox, proving that small teams can create massive hits.</p>
+      </div>
+      <div class="story-card">
+        <h4>Weekly Update Schedule Keeps Players Coming Back</h4>
+        <p>Developer Grandma's Favourite Games has maintained an impressive weekly update cadence since launch, with new content dropping every Saturday. Each update brings new threats in the form of animals or entities, new survival mechanics, character Classes with unique perks, or special 2x Diamond bonus weekends.</p>
+      </div>
+      <div class="story-card">
+        <h4>Survival Horror Meets Base Building in Breakout Roblox Title</h4>
+        <p>Players must survive 99 in-game days while searching for and rescuing four missing children lost in a dangerous forest. The game blends survival horror tension with crafting and base-building mechanics, and its atmospheric night cycles and jump scares have made it one of Roblox's most popular horror experiences.</p>
+      </div>
+      <div class="story-card">
+        <h4>99 Nights Hits 14 Million Peak Concurrent Players</h4>
+        <p>The horror survival game reached a staggering peak of 14 million concurrent players, cementing its place among the most-played experiences on Roblox. With over 25 billion total visits, the title developed by three friends has become one of the platform's biggest success stories of the past year.</p>
+      </div>
     </div>
 
     

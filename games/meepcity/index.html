@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>MeepCity is a classic Roblox social experience where you can chat with friends, play mini-games, earn coins, and customize your very own estate. Adopt adorable Meeps as pets, decorate your home with thousands of furniture items, and enjoy a vibrant social atmosphere. With over 16 billion visits, MeepCity remains one of the most visited games in Roblox history.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>First Roblox Game to Hit One Billion Visits</h4>
+        <p>MeepCity made history in 2019 by becoming the first game on Roblox to reach one billion total visits, a landmark achievement for the platform. The milestone highlighted just how massive Roblox's audience had become and validated the social hangout genre. Developer alexnewtron's creation proved that social experiences could rival action games in popularity.</p>
+      </div>
+      <div class="story-card">
+        <h4>Parties Feature Created Roblox Social Media Phenomenon</h4>
+        <p>MeepCity's customizable house party system became a cultural phenomenon where players would host elaborate gatherings and roleplay scenarios. The parties feature essentially turned Roblox into a social network for millions of young players. However, the unmoderated nature of these parties also raised significant concerns about player safety.</p>
+      </div>
+      <div class="story-card">
+        <h4>Fishing Minigame Economy Hooked Casual Players</h4>
+        <p>The game's fishing system provided a relaxing core loop that gave players a steady income of in-game currency to decorate their estates. This simple but satisfying mechanic kept casual players engaged for hours and provided an alternative to the social aspects. The fishing spots became popular gathering places where friendships naturally formed.</p>
+      </div>
+      <div class="story-card">
+        <h4>Safety Concerns Led to Moderation Overhauls</h4>
+        <p>MeepCity faced scrutiny when reports emerged about inappropriate behavior occurring in the game's party spaces, particularly concerning given its young player base. The controversy prompted both the developer and Roblox to implement stricter moderation tools and chat filters. The situation became a pivotal moment in broader discussions about child safety on the Roblox platform.</p>
+      </div>
+      <div class="story-card">
+        <h4>Estate Customization Pioneered Player Housing on Roblox</h4>
+        <p>MeepCity's estate system, which let players purchase furniture and design personalized homes, set the template for housing features in countless subsequent Roblox games. Players spent millions of Robux decorating their virtual properties with ever-expanding furniture catalogs. The feature demonstrated that creative self-expression could be just as compelling as traditional gameplay mechanics.</p>
+      </div>
     </div>
 
     

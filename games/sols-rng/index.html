@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Sol's RNG is a unique luck-based experience where you roll for rare auras, participate in boss raids, and collect increasingly powerful items. The thrill of RNG keeps every session exciting — will you get the rarest aura in the game? With boss raids, trading, and deep progression systems, Sol's RNG has built a massive and dedicated community.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Simplicity of Rolling Made Game Strangely Addictive</h4>
+        <p>Sol's RNG distilled gameplay down to its most basic element: pressing a button and hoping for rare outcomes determined entirely by chance. Despite having almost no traditional gameplay mechanics, the pure dopamine rush of chasing ultra-rare rolls attracted millions of players. The game became a fascinating case study in how randomness itself could be the core appeal.</p>
+      </div>
+      <div class="story-card">
+        <h4>Astronomically Rare Auras Became Status Symbols</h4>
+        <p>Some auras in Sol's RNG had drop rates so vanishingly small that obtaining them required astronomical luck, with odds reaching into the millions-to-one range. Players who rolled these ultra-rare auras became celebrities within the community, with screenshots of their achievements going viral. The extreme rarity created a hierarchy of prestige that drove competitive rolling.</p>
+      </div>
+      <div class="story-card">
+        <h4>Game Sparked Philosophical Debates About RNG Design</h4>
+        <p>Sol's RNG generated genuine discussion among game designers and players about whether pure luck-based mechanics constituted meaningful gameplay. Critics argued it was essentially a slot machine wrapper, while fans countered that the social experience and chase were the real game. The debate highlighted broader questions about what makes an experience engaging.</p>
+      </div>
+      <div class="story-card">
+        <h4>Content Creators Streamed Marathon Rolling Sessions</h4>
+        <p>YouTubers and streamers began hosting extended livestreams dedicated to rolling in Sol's RNG, with viewers tuning in to witness rare drops in real time. Some creators spent dozens of hours attempting to land specific ultra-rare auras, turning the pursuit into compelling viewing. These streams drove massive awareness and player growth for the game.</p>
+      </div>
+      <div class="story-card">
+        <h4>Biome and Luck Systems Added Strategic Layers</h4>
+        <p>Updates introduced different biomes and luck-boosting mechanics that gave players ways to slightly influence their odds, adding a thin layer of strategy to the pure RNG core. Players learned optimal times and conditions for rolling, sharing tips about luck multipliers and special events. These additions helped retain players who might have otherwise grown tired of pure random chance.</p>
+      </div>
     </div>
 
     

@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Natural Disaster Survival is one of Roblox's oldest and most iconic games. Survive up to 13 different natural disasters including tsunamis, tornadoes, earthquakes, and volcanic eruptions across 23 unique maps. Each round brings a random disaster, and your goal is simple: survive. With its timeless gameplay and simple premise, this classic continues to entertain millions of players.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>One of Roblox's Oldest Still-Active Games</h4>
+        <p>Created in 2008 by Stickmasterluke, Natural Disaster Survival is one of the longest-running games still actively played on Roblox. The game has survived over seventeen years of platform evolution while maintaining its core appeal. Its longevity makes it a living piece of Roblox history that newer players continue to discover.</p>
+      </div>
+      <div class="story-card">
+        <h4>Simple Concept Attracted Over Three Billion Visits</h4>
+        <p>The game's straightforward premise of surviving random natural disasters on a small island proved to be timelessly entertaining. With over three billion visits, it ranks among the most-played experiences in Roblox history. The simplicity that some might see as a limitation turned out to be its greatest strength.</p>
+      </div>
+      <div class="story-card">
+        <h4>Became the Quintessential Roblox Nostalgia Game</h4>
+        <p>For an entire generation of Roblox players, Natural Disaster Survival was one of the first games they ever played on the platform. It holds a special place in community nostalgia, frequently appearing in 'OG Roblox games' discussions and videos. Many veteran players still return to it periodically as a comfort experience.</p>
+      </div>
+      <div class="story-card">
+        <h4>Disaster Physics Were Groundbreaking for Early Roblox</h4>
+        <p>When it launched, the game's physics-based destruction of buildings during earthquakes and floods was genuinely impressive for the Roblox engine. Watching structures crumble and debris fly created emergent gameplay moments that felt dynamic and unpredictable. These physics interactions set a technical benchmark that influenced many subsequent Roblox games.</p>
+      </div>
+      <div class="story-card">
+        <h4>Stickmasterluke Became a Roblox Development Legend</h4>
+        <p>Creator Stickmasterluke parlayed the success of Natural Disaster Survival into a legendary reputation within the Roblox developer community. He eventually joined Roblox Corporation as an employee, one of the early examples of the platform hiring from its own creator base. His journey from hobbyist developer to industry professional inspired many young creators on the platform.</p>
+      </div>
     </div>
 
     

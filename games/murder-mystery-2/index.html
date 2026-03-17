@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Murder Mystery 2 is a classic Roblox deduction game. Each round, one player becomes the Murderer who must eliminate everyone, one player becomes the Sheriff with a gun to stop the Murderer, and the rest are Innocents who must survive and use detective skills. Collect and trade hundreds of unique knives and weapons, unlock rare items, and sharpen your detective instincts across dozens of atmospheric maps.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Christmas 2025 Event Is the Biggest Holiday Update Yet</h4>
+        <p>The Christmas Event 2025, running from December 14 to January 19, introduced a brand-new lobby, two new areas, a 30-tier battle pass, daily quests, and a crafting system. The update set a new record with five chromas added in a single event, more than any previous Murder Mystery 2 update.</p>
+      </div>
+      <div class="story-card">
+        <h4>Snowball Fight Mode Adds Team-Based Combat</h4>
+        <p>The Christmas 2025 update debuted Snowball Fight, a new game mode where every player receives a knife and is assigned to either a red or blue team. Players must eliminate members of the opposing team to win, marking Murder Mystery 2's first team-based competitive mode.</p>
+      </div>
+      <div class="story-card">
+        <h4>Summer 2025 Becomes First Promoted Summer Event</h4>
+        <p>The Summer Event 2025, running from July 18 to October 18, marked the first time a Summer update was promoted to a main event in Murder Mystery 2's history. Summer joined Halloween and Christmas as part of the game's annual flagship event lineup, giving players three major seasonal celebrations per year.</p>
+      </div>
+      <div class="story-card">
+        <h4>MM2 Continues Evolving a Decade After Launch</h4>
+        <p>Originally created by Nikilis in 2014, Murder Mystery 2 has maintained its relevance on Roblox for over a decade through consistent updates and seasonal events. The game's simple but addictive formula — one murderer, one sheriff, and innocent bystanders — continues to attract new generations of players.</p>
+      </div>
+      <div class="story-card">
+        <h4>Daily Quests System Adds New Progression Layer</h4>
+        <p>Introduced alongside the Christmas 2025 event, the new Daily Quests system gives players repeatable objectives to complete for rewards. The feature added a fresh layer of daily engagement to Murder Mystery 2, encouraging players to log in regularly beyond just seasonal events.</p>
+      </div>
     </div>
 
     

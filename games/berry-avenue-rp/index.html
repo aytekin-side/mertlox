@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Berry Avenue RP is a vibrant roleplay and hangout experience where you can choose from stylish houses, drive cool cars, and use roleplay items to create your own stories. Become a student at the local school, work as a police officer, join the hospital staff, or simply hang out with friends. With regular updates bringing new features and locations, Berry Avenue is one of Roblox's most popular roleplay destinations.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Berry Avenue Became Roblox's Premier Roleplay Hub</h4>
+        <p>Berry Avenue RP established itself as one of the most popular roleplay games on the platform, offering a detailed suburban neighborhood setting for player-created stories. Its combination of vehicle systems, house customization, and social features created an ideal sandbox for creative roleplay.</p>
+      </div>
+      <div class="story-card">
+        <h4>TikTok Roleplay Videos Drove Enormous Traffic</h4>
+        <p>Players began filming elaborate roleplay scenarios in Berry Avenue and posting them as serialized TikTok content, with some series gaining millions of followers. This organic social media presence became the game's primary growth engine and inspired countless new players to create their own stories.</p>
+      </div>
+      <div class="story-card">
+        <h4>Customization Options Set a New Standard</h4>
+        <p>Berry Avenue offered an unusually deep character and home customization system for a Roblox roleplay game, including detailed outfit options, furniture placement, and vehicle modifications. This level of personalization helped players feel more invested in their characters and living spaces.</p>
+      </div>
+      <div class="story-card">
+        <h4>Community Created Unwritten Roleplay Rules</h4>
+        <p>An informal code of conduct emerged among regular players, establishing conventions for how to initiate roleplay scenarios, respect others' stories, and handle conflicts in character. This self-governing community culture helped maintain a relatively positive environment despite the open-ended nature of the game.</p>
+      </div>
+      <div class="story-card">
+        <h4>Regular Updates Added New Locations and Vehicles</h4>
+        <p>The developer consistently expanded the map with new buildings, areas, and drivable vehicles, giving roleplayers fresh settings for their stories. Each update sparked new roleplay trends as players incorporated the additions into their ongoing narratives.</p>
+      </div>
     </div>
 
     

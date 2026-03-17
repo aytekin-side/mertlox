@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Creatures of Sonaria is a creature survival game where you play as unique kaiju-like animals in a vast open world. Hunt prey, avoid predators, grow from a hatchling to a massive creature, and explore diverse biomes. With dozens of species to unlock, each with unique abilities and playstyles, every session offers a different experience. Team up with other creatures or go solo in this breathtaking survival adventure.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Sonar Studios Created a Living Ecosystem</h4>
+        <p>Creatures of Sonaria launched in 2021 as one of Roblox's most ambitious creature survival games, letting players control over 100 unique species in a sprawling open world. The game drew comparisons to classic survival titles but stood out with its emphasis on realistic ecosystem mechanics like food chains and territory control.</p>
+      </div>
+      <div class="story-card">
+        <h4>Massive Species Roster Keeps Growing</h4>
+        <p>The game has continually expanded its creature roster well beyond 150 species, each with unique abilities, diets, and movement styles. Community excitement peaks with each new creature reveal, often accompanied by limited-time events that drive millions of visits.</p>
+      </div>
+      <div class="story-card">
+        <h4>Trading Economy Sparked Community Controversy</h4>
+        <p>Creatures of Sonaria developed a robust player trading economy where rare and limited creatures became highly sought-after commodities. Scam attempts and value disputes led the developers to implement safer trading systems and the community created its own value lists to regulate the market.</p>
+      </div>
+      <div class="story-card">
+        <h4>Seasonal Events Draw Massive Crowds</h4>
+        <p>Seasonal events introducing exclusive limited-time creatures have become a hallmark of the game, with Halloween events being particularly popular. These events regularly push concurrent player counts to new highs as collectors rush to obtain rare species before they vanish.</p>
+      </div>
+      <div class="story-card">
+        <h4>Fan Art Community Became Unexpectedly Massive</h4>
+        <p>The game's diverse and visually striking creature designs spawned one of Roblox's most active fan art communities across platforms like DeviantArt and Twitter. Sonar Studios has embraced this, occasionally featuring community artwork and even running design contests that influence new creature additions.</p>
+      </div>
     </div>
 
     

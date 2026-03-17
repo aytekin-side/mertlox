@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Ninja Legends is an action-packed simulator where you train to become the ultimate ninja warrior. Swing your sword to earn Chi, collect powerful ninja pets that fight alongside you, unlock elemental islands with unique powers, and master ancient techniques. With its satisfying progression loop, epic boss battles, and constant updates, Ninja Legends delivers an exciting ninja fantasy.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Ninja Training Loop Perfected the Simulator Formula</h4>
+        <p>Ninja Legends refined the Roblox simulator genre by combining satisfying progression mechanics with a ninja training theme that resonated with players. The core loop of training, earning currency, and unlocking increasingly powerful abilities and pets proved irresistible. Developer ScriptBloxian Studios demonstrated a deep understanding of what made simulator games compelling.</p>
+      </div>
+      <div class="story-card">
+        <h4>Pet Collection System Drove Long-Term Engagement</h4>
+        <p>The game featured an extensive pet system where players could hatch, evolve, and collect hundreds of unique companions with varying rarities. Rare and legendary pets became highly valued within the community, with players spending hours grinding to complete their collections. The pet meta added a layer of social prestige that complemented the core ninja progression.</p>
+      </div>
+      <div class="story-card">
+        <h4>Island Expansion Updates Kept World Growing</h4>
+        <p>Regular updates introduced new islands with unique themes, each containing fresh training areas, currencies, and rewards to pursue. Each island effectively reset the progression treadmill in a satisfying way that gave players new goals. This expansion model kept the game feeling fresh without invalidating earlier progress.</p>
+      </div>
+      <div class="story-card">
+        <h4>Ranks and Belts System Provided Clear Progression Goals</h4>
+        <p>The ninja rank system gave players a visible progression path from novice to legendary ninja master, with each rank requiring specific milestones. This clear structure helped players understand what to work toward and provided a constant sense of achievement. The belt and rank announcements became celebratory moments that the community shared and recognized.</p>
+      </div>
+      <div class="story-card">
+        <h4>ScriptBloxian Studios Became Top Simulator Developer</h4>
+        <p>The success of Ninja Legends established ScriptBloxian Studios as one of the premier simulator game developers on Roblox. The studio went on to create multiple successful follow-up titles using lessons learned from Ninja Legends. Their consistent track record demonstrated that understanding player psychology and engagement loops was just as important as technical skill.</p>
+      </div>
     </div>
 
     

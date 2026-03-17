@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Tower Defense Simulator challenges you to place strategic units to defend against increasingly powerful hordes of zombies. Team up with friends to face stronger bosses and unlock new, more powerful units. With seasonal events, limited-time skins, and deep strategic gameplay, every match requires careful planning and teamwork to survive.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Halloween Events Became Annual Community Traditions</h4>
+        <p>Tower Defense Simulator's Halloween events, particularly the Fallen King boss fight, became some of the most anticipated seasonal content on Roblox. Players would form dedicated groups weeks in advance to strategize and grind for exclusive limited-time rewards. The events helped cement TDS as one of the platform's top cooperative experiences.</p>
+      </div>
+      <div class="story-card">
+        <h4>Frost Spirit Boss Sparked Massive Player Frustration</h4>
+        <p>The 2020 Winter event introduced the Frost Spirit, a boss so difficult that most random groups couldn't defeat it without highly coordinated strategies. Community backlash was intense, with players arguing the event was designed to be nearly impossible without top-tier towers. Paradoxum Games eventually adjusted the difficulty, but the controversy highlighted ongoing debates about accessibility in the game.</p>
+      </div>
+      <div class="story-card">
+        <h4>Game Surpassed Two Billion Total Visits</h4>
+        <p>Tower Defense Simulator crossed the two billion visits milestone, placing it among the most visited experiences on Roblox. The achievement was remarkable for a tower defense game, a genre that many considered niche on the platform. The milestone was driven by consistent content updates and a loyal player base that returned for each new event.</p>
+      </div>
+      <div class="story-card">
+        <h4>Crossover Events Brought Fresh Excitement to Players</h4>
+        <p>TDS introduced several crossover events and collaboration-style updates that brought themed towers and enemies into the game. These events drew in players who might not typically play tower defense games, significantly boosting concurrent player counts. Each collaboration created a rush as players competed to earn exclusive, time-limited tower skins.</p>
+      </div>
+      <div class="story-card">
+        <h4>Hardcore Mode Tested Elite Players' Limits</h4>
+        <p>The introduction of Hardcore mode gave veteran players the ultimate challenge, featuring stronger enemies and stricter win conditions. Completing Hardcore became a badge of honor in the community, with players sharing victory screenshots across social media. The mode reinvigorated interest among long-time players who had mastered the standard difficulty.</p>
+      </div>
     </div>
 
     

@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Bee Swarm Simulator lets you grow your very own swarm of bees. Collect pollen from flowers scattered across vast fields, convert it to honey, and use your earnings to hatch new bees and unlock powerful gear. Meet friendly bears who give you quests, discover rare gifted bees, and participate in seasonal Beesmas events. With deep progression and a dedicated community, this simulator keeps players coming back for years.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Solo Developer Onett Became a Roblox Legend</h4>
+        <p>Bee Swarm Simulator was built and maintained almost entirely by a single developer known as Onett, who became one of the most respected creators on the platform. His dedication to the game over many years earned him a devoted fanbase that patiently waited through long update gaps.</p>
+      </div>
+      <div class="story-card">
+        <h4>Beesmas Events Created Annual Community Traditions</h4>
+        <p>Every holiday season, Onett released massive Beesmas updates featuring limited-time quests, exclusive bees, and festive decorations. These events became annual traditions that brought back lapsed players and consistently boosted the game to hundreds of thousands of concurrent users.</p>
+      </div>
+      <div class="story-card">
+        <h4>Game Maintained Popularity Across Six-Plus Years</h4>
+        <p>Launching in 2018, Bee Swarm Simulator defied the typical Roblox lifecycle by remaining consistently popular well into the mid-2020s. Its longevity is a testament to deep progression systems that kept dedicated players grinding for years.</p>
+      </div>
+      <div class="story-card">
+        <h4>Ready Player Two Event Featured Bee Swarm</h4>
+        <p>Roblox selected Bee Swarm Simulator as one of the featured games in the official Ready Player Two event, a cross-platform scavenger hunt tied to the sequel novel. This high-profile inclusion introduced millions of new players to the game and validated its cultural significance on the platform.</p>
+      </div>
+      <div class="story-card">
+        <h4>Mythic Bee Discoveries Drove Community Excitement</h4>
+        <p>The introduction of mythic-tier bees with incredibly rare acquisition methods created some of the most celebrated moments in the game's community. Players who obtained these bees often posted their achievements to massive engagement on Reddit and YouTube, fueling ongoing interest.</p>
+      </div>
     </div>
 
     

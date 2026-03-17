@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Rivals is an award-winning FPS game where you challenge other players in 1v1 to 5v5 duels. With 40+ weapons spanning primaries, secondaries, melees, and utilities, every match plays differently. Winner of Best Shooter Experience at the Roblox Innovation Awards 2025. Available on Desktop, Mobile, Xbox, and PlayStation 5. The first to reach 5 kills wins each round.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Rivals Launches Season 2 with Massive Christmas Update</h4>
+        <p>Update 17, released on December 12, 2025, brought Season 2 to Rivals along with a revamped Season Pass, new weapons, Ranked changes, and a Festive Event. The holiday-themed update was the biggest content drop since the game's launch, adding multiple new maps and cosmetics.</p>
+      </div>
+      <div class="story-card">
+        <h4>Region-Based Matchmaking Improves Competitive Play</h4>
+        <p>A major quality-of-life update introduced region-based matchmaking, placing players into the best possible servers based on their location. The change significantly reduced latency for competitive players and has been credited with improving the overall ranked experience.</p>
+      </div>
+      <div class="story-card">
+        <h4>Rivals Maintains 80K Active Players as Top Roblox FPS</h4>
+        <p>Since its June 2024 launch, Rivals has grown into one of the most popular FPS games on Roblox, regularly maintaining around 80,000 active players. The game has delivered over 19 updates in less than two years, keeping the competitive shooter community engaged with fresh content.</p>
+      </div>
+      <div class="story-card">
+        <h4>Valentine's Update Adds New Maps and Weapon Balancing</h4>
+        <p>Update 18, the Valentine's Update released on February 14, 2026, introduced new maps, skins, bundles, and significant weapon balance changes. The update also included profile improvements and bug fixes that addressed long-standing community feedback.</p>
+      </div>
+      <div class="story-card">
+        <h4>Lucky Update Continues Seasonal Content Tradition</h4>
+        <p>Update 19, the Lucky Update themed around St. Patrick's Day, continued Rivals' tradition of tying major content drops to seasonal events. The game has averaged roughly one major update per month since launch, a pace that has helped it stand out in Roblox's competitive FPS landscape.</p>
+      </div>
     </div>
 
     

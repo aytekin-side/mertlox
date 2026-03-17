@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Bubble Gum Simulator INFINITY takes the beloved bubble gum formula to new heights. Blow massive bubbles to increase your jump height and reach the clouds, where you'll discover hidden sky islands full of secrets. Hatch rare pets from eggs, fuse machine pets, take part in bubble competitions, and explore a colorful world of endless possibilities.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Reboot Revived a Fading Franchise Successfully</h4>
+        <p>Bubble Gum Simulator INFINITY launched as a complete overhaul of the original 2019 hit, bringing modern graphics and revamped mechanics. The reboot pulled in millions of visits within its first week, proving the bubble-blowing formula still had massive appeal. Developer Rumble Studios used player feedback from the original to shape nearly every new feature.</p>
+      </div>
+      <div class="story-card">
+        <h4>Pet Trading Economy Became Surprisingly Complex</h4>
+        <p>The game developed one of Roblox's most active pet trading communities, with rare pets fetching enormous value in player-run markets. Dedicated Discord servers and tier lists emerged to track fluctuating pet values in real time. Some ultra-rare pets from limited events became status symbols comparable to those in Adopt Me.</p>
+      </div>
+      <div class="story-card">
+        <h4>Simulator Genre Pioneer Inspired Dozens of Clones</h4>
+        <p>The original Bubble Gum Simulator was among the first games to popularize the 'collect and upgrade' simulator format on Roblox. Its success spawned an entire wave of simulator games throughout 2019 and 2020 that copied its core loop. Rumble Studios became one of the most recognized simulator developers on the platform.</p>
+      </div>
+      <div class="story-card">
+        <h4>Seasonal Events Drew Record Player Surges</h4>
+        <p>Holiday-themed updates featuring exclusive pets and limited-time worlds consistently drove player counts to peak levels. The Halloween and Christmas events became annual traditions that players planned around weeks in advance. These timed events created urgency that kept the community returning year after year.</p>
+      </div>
+      <div class="story-card">
+        <h4>Rumble Studios Built a Multi-Game Empire</h4>
+        <p>Revenue from Bubble Gum Simulator helped Rumble Studios expand into a full development studio with multiple successful titles. The team grew from a small group of hobbyist developers into a professional operation employing dozens of people. Their journey became an inspiration for aspiring Roblox developers looking to turn passion projects into careers.</p>
+      </div>
     </div>
 
     

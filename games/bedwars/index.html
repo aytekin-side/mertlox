@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>BedWars is a strategic team-based multiplayer game where your goal is to collect resources to buy gear such as armor and swords for combat. Protect your bed at all costs — once it's destroyed, your team can no longer respawn. Destroy enemy beds and eliminate all opponents to win. Play in solos (1v1), doubles (2v2), squads (4v4), or even 30v30 matches. Regular updates bring new kits, maps, and seasonal content.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>BedWars Surpassed 10 Billion Total Visits</h4>
+        <p>Easy.gg's BedWars crossed the 10 billion visits milestone on Roblox, cementing it as one of the platform's most popular competitive games. The achievement placed it among an elite tier of Roblox experiences that have reached that threshold.</p>
+      </div>
+      <div class="story-card">
+        <h4>Constant Kit Updates Keep Meta Fresh</h4>
+        <p>Easy.gg releases new kits on a near-weekly basis, each introducing unique abilities that shift the competitive meta. This rapid update cycle has been both praised for keeping gameplay fresh and criticized by players who feel balance changes come too fast to adapt to.</p>
+      </div>
+      <div class="story-card">
+        <h4>BedWars Launched Competitive Ranked Mode</h4>
+        <p>The addition of a ranked matchmaking system gave serious players a way to climb leaderboards and prove their skill. The mode introduced seasonal resets and exclusive cosmetic rewards, driving consistent engagement from the competitive community.</p>
+      </div>
+      <div class="story-card">
+        <h4>Collaboration Events Drew Massive Player Spikes</h4>
+        <p>BedWars has hosted multiple crossover events featuring themed kits and limited-time modes tied to popular franchises. These collaboration events routinely pushed concurrent player counts well above 100,000, generating viral buzz across YouTube and social media.</p>
+      </div>
+      <div class="story-card">
+        <h4>Easy.gg Built a Studio Around BedWars Success</h4>
+        <p>Developer Easy.gg grew from a small team into a full game studio largely on the strength of BedWars' popularity. The revenue from the game's kit passes and cosmetic shop allowed them to expand their team and begin developing additional Roblox titles.</p>
+      </div>
     </div>
 
     

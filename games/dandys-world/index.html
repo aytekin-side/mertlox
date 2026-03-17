@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Dandy's World is a mascot horror survival multiplayer game where you must team up with fellow Toons to complete machines and descend deeper into Gardenview Center. Each floor brings new challenges, terrifying encounters, and mysteries to uncover. Collect different Toons with unique abilities, work together with friends, and try to survive the horrors lurking within.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Dandy's World Became 2024's Breakout Horror Hit</h4>
+        <p>Dandy's World emerged as one of Roblox's most talked-about games in 2024, blending mascot horror aesthetics with cooperative survival gameplay. Its unsettling atmosphere wrapped in a colorful cartoon veneer struck a nerve with players and content creators alike.</p>
+      </div>
+      <div class="story-card">
+        <h4>Fan Art Community Exploded Across Social Media</h4>
+        <p>The game's distinctive character designs inspired a massive wave of fan art on platforms like Twitter, TikTok, and DeviantArt. Dandy's World characters became some of the most drawn Roblox-related subjects of 2024, extending the game's cultural reach far beyond the platform.</p>
+      </div>
+      <div class="story-card">
+        <h4>Lore Hunters Obsessively Decoded Hidden Details</h4>
+        <p>Players discovered that the game contained layers of hidden lore embedded in environmental details, item descriptions, and secret areas. A dedicated community of theorists formed, producing analysis videos and documents that rivaled the depth of Five Nights at Freddy's lore investigations.</p>
+      </div>
+      <div class="story-card">
+        <h4>Characters Became Iconic Roblox Mascots</h4>
+        <p>Several of the game's original characters, particularly its antagonists, became instantly recognizable icons within the broader Roblox community. Their designs were widely used in memes, profile pictures, and fan-made merchandise.</p>
+      </div>
+      <div class="story-card">
+        <h4>Rapid Updates Kept the Horror Fresh</h4>
+        <p>The developer maintained an aggressive update schedule, regularly adding new characters, maps, and gameplay mechanics. Each major update reignited interest and sent the game climbing back up Roblox's trending charts.</p>
+      </div>
     </div>
 
     

@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>In Escape Tsunami for Brainrots, your goal is to collect valuable Brainrots, survive incoming tsunamis by hiding in safe zones, and use the money earned from Brainrots to buy upgrades like speed and carrying capacity. Run fast to grab Brainrots, avoid the crashing waves, upgrade your creatures to earn more money, and expand your base for more slots. The deeper you venture, the rarer the Brainrots you'll find. Rebirth to progress through the leaderboards and dominate the competition.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Radioactive Event Adds Secret Obstacle Course</h4>
+        <p>A recent update introduced the Radioactive event, featuring countdown timers and radioactive chemicals pouring across the map. A secret obstacle course hidden between the Legendary and Mythical areas rewards players with radioactive lucky blocks containing brainrots with exclusive radioactive mutations.</p>
+      </div>
+      <div class="story-card">
+        <h4>Six Tsunami Types Keep Survival Unpredictable</h4>
+        <p>Escape Tsunami for Brainrots features six distinct tsunami types ranging from Super Slow to the devastating Beast Tsunami. As the game progresses, the water rises faster and paths become more dangerous, meaning even small mistakes can instantly end a run and keep veteran players on their toes.</p>
+      </div>
+      <div class="story-card">
+        <h4>Phantom Update Overhauls Game Mechanics</h4>
+        <p>The Phantom Update in 2026 introduced new game mechanics, additional wave types, and automation features for player bases. The update represents one of the biggest content drops in the game's history, giving both new and returning players fresh reasons to jump back in.</p>
+      </div>
+      <div class="story-card">
+        <h4>Nearly 5 Billion Visits and Climbing</h4>
+        <p>Escape Tsunami for Brainrots has surpassed 4.7 billion total visits on Roblox, with a consistent player base of over 200,000 concurrent users. The brainrot-collecting survival game maintains an 84% approval rating and an average play session of over 11 minutes.</p>
+      </div>
+      <div class="story-card">
+        <h4>Infinity Rarity Brainrots Drive Collector Frenzy</h4>
+        <p>The game's collectible brainrots span multiple rarity tiers, with the elusive Infinity rarity sitting at the very top. Players can upgrade their bases with treadmills for speed boosts and unlock animals for extra steps, creating a progression loop that keeps collectors grinding for the rarest finds.</p>
+      </div>
     </div>
 
     

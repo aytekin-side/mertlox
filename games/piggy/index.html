@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Piggy is an episodic survival horror game combining escape-room puzzle mechanics with a gripping storyline. Each chapter challenges you to find keys, solve puzzles, and escape before Piggy catches you. With multiple seasons of story content, mystery skin quests, and dozens of atmospheric maps, Piggy has become one of Roblox's most beloved horror experiences with over 14 billion visits.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Became Roblox's Fastest Game to One Billion Visits</h4>
+        <p>Piggy reached one billion visits faster than almost any game in Roblox history, achieving the milestone within months of its 2020 launch. The game's release coincided perfectly with pandemic lockdowns, when millions of new players were flooding onto the platform. Its blend of horror, puzzle-solving, and multiplayer betrayal proved irresistible to a massive audience.</p>
+      </div>
+      <div class="story-card">
+        <h4>Started as a Peppa Pig Parody Horror Game</h4>
+        <p>MiniToon originally created Piggy as a horror parody inspired by the children's show Peppa Pig, combined with the escape-room mechanics of Granny. What began as a lighthearted joke evolved into a sprawling narrative with deep lore, original characters, and emotional story beats. The transformation from parody to serious horror franchise was one of Roblox's most unexpected creative journeys.</p>
+      </div>
+      <div class="story-card">
+        <h4>Community Built Thousands of Fan-Made Chapters</h4>
+        <p>Piggy's build mode allowed players to create and share their own custom maps, spawning thousands of community-made chapters. Some fan creations rivaled the quality of official content and attracted millions of plays on their own. This user-generated content ecosystem dramatically extended the game's lifespan and kept the community engaged between official updates.</p>
+      </div>
+      <div class="story-card">
+        <h4>MiniToon's Solo Development Story Inspired Many Creators</h4>
+        <p>MiniToon developed Piggy largely as a solo creator, and the game's phenomenal success became one of Roblox's most inspiring developer stories. The game generated millions in revenue and proved that a single talented developer could compete with large studios on the platform. MiniToon's journey motivated countless aspiring Roblox developers to pursue their own projects.</p>
+      </div>
+      <div class="story-card">
+        <h4>Piggy Lore Sparked Massive Fan Theory Community</h4>
+        <p>The game's mysterious storyline, featuring infected characters and hidden plot twists, generated an enormous fan theory community on YouTube and Reddit. Content creators produced hours of lore analysis videos that collectively earned hundreds of millions of views. The narrative depth was unusual for a Roblox game and showed that the platform's audience craved storytelling alongside gameplay.</p>
+      </div>
     </div>
 
     

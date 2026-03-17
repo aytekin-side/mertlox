@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Fish It! is a wildly popular fishing adventure where you cast your line to catch hundreds of unique fish species across diverse biomes. Upgrade your rods, discover secret fishing spots, unlock enchantments, and participate in limited-time cosmic events. With its addictive progression system and constant stream of new content, Fish It! has quickly become one of the most-played games on Roblox.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Fish It Rode the 2024 Fishing Game Craze</h4>
+        <p>Fish It launched during a period when fishing games were exploding in popularity on Roblox, competing directly with other titles in the genre. Its accessible mechanics and colorful art style helped it carve out a dedicated player base in a crowded market.</p>
+      </div>
+      <div class="story-card">
+        <h4>Rare Fish Became Highly Coveted Trading Items</h4>
+        <p>Players discovered that certain legendary fish had extremely low catch rates, turning them into status symbols within the community. Trading communities formed on Discord where rare catches were exchanged and showcased.</p>
+      </div>
+      <div class="story-card">
+        <h4>Seasonal Events Added Themed Fish Collections</h4>
+        <p>The developers introduced limited-time seasonal events with exclusive fish that could only be caught during specific periods. These events created urgency that drove player retention and kept the community engaged between major updates.</p>
+      </div>
+      <div class="story-card">
+        <h4>Concurrent Players Surged Past Expectations</h4>
+        <p>Fish It attracted hundreds of thousands of concurrent players shortly after release, surprising even its developers with the level of interest. The strong launch was fueled by Roblox's algorithm surfacing the game to fishing enthusiasts across the platform.</p>
+      </div>
+      <div class="story-card">
+        <h4>Community Guides Mapped Every Fishing Location</h4>
+        <p>Dedicated players created exhaustive wikis and video guides documenting every fishing spot, bait combination, and rare spawn condition. This community-driven knowledge base became essential for new players and helped sustain long-term engagement.</p>
+      </div>
     </div>
 
     

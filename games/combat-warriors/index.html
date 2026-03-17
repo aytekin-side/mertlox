@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Combat Warriors is an intense PvP fighting game featuring melee and ranged weapons with deep combat mechanics. Master timing, parries, and combos to dominate your opponents. With polearm skills, sword techniques, and ranged utilities, every fight demands skill and strategy. Regular updates bring new weapons, abilities, and gameplay modes.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Brutal Melee Combat Pushed Roblox Content Limits</h4>
+        <p>Combat Warriors gained attention for its unusually graphic melee combat featuring blood effects and ragdoll physics that tested Roblox's content guidelines. The game walked a fine line between visceral gameplay and platform-appropriate content, sparking debates about violence in Roblox games. Despite concerns, it maintained its presence and attracted players seeking more intense combat experiences.</p>
+      </div>
+      <div class="story-card">
+        <h4>Skill-Based Fighting Drew Hardcore PvP Community</h4>
+        <p>Unlike many Roblox combat games, Combat Warriors rewarded genuine skill with its directional attack system and timing-based parry mechanics. A dedicated competitive community emerged around mastering different weapon types and combat techniques. Top players became well-known figures who were respected across the broader Roblox PvP scene.</p>
+      </div>
+      <div class="story-card">
+        <h4>Game Surpassed One Billion Total Visits</h4>
+        <p>Combat Warriors crossed the one billion visits milestone, cementing its place among Roblox's most popular PvP experiences. The achievement was remarkable for a game in a niche genre that didn't rely on casual or simulator mechanics. Developer SwenSven celebrated the milestone with the community through special in-game events.</p>
+      </div>
+      <div class="story-card">
+        <h4>Weapon Variety Kept Meta Constantly Evolving</h4>
+        <p>Regular additions of new melee and ranged weapons kept the Combat Warriors meta shifting, preventing any single strategy from dominating for too long. Each weapon featured unique movesets, reach, and damage values that encouraged experimentation. The balancing process became a constant dialogue between developers and the competitive community.</p>
+      </div>
+      <div class="story-card">
+        <h4>Content Creators Popularized Montage Culture Around Game</h4>
+        <p>YouTube and TikTok became flooded with Combat Warriors highlight reels featuring impressive kill chains and clutch moments. The game's physics engine produced cinematic ragdoll effects that made clips inherently entertaining to watch. This montage culture became a significant driver of new player acquisition and community growth.</p>
+      </div>
     </div>
 
     

@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Survive Lava for Brainrots is a fast-paced survival tycoon where you must run into the field, grab as many Brainrots as you can, and rush back to your base before the rising lava engulfs the entire map. Place collected Brainrots in your hub where they generate bucks over time. Rebirth to upgrade your jump height, discover mutations, and unlock new areas. The deeper you go, the rarer the Brainrots.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Dinosaur Update Erupts with Volcano Event</h4>
+        <p>The Dinosaur Update went live on March 14, 2026, introducing a Volcano event along with dinosaur-themed content and new brainrots to collect. The update was one of the most anticipated drops for the game, adding a prehistoric twist to the lava survival formula.</p>
+      </div>
+      <div class="story-card">
+        <h4>Cheese Event Brings Quirky New Mechanics</h4>
+        <p>The Cheese Event, launched on February 28, 2026, introduced a unique hourly event where players collect cheese pieces scattered across the map and feed them to a character named Steak. When the 10-minute event ends, Steak's stomach pops and drops rewards, alongside a new Cheese mutation and multiple new brainrots.</p>
+      </div>
+      <div class="story-card">
+        <h4>Admin Abuse Events Draw Massive Weekly Crowds</h4>
+        <p>Admin Abuse has become one of the game's most popular features — a scheduled weekly event on Fridays and Mondays that boosts spawn rates and luck multipliers. The events make rare brainrots significantly easier to obtain, drawing huge player surges and creating a reliable community gathering point.</p>
+      </div>
+      <div class="story-card">
+        <h4>Eight Rarity Tiers Fuel the Collector Economy</h4>
+        <p>Brainrots in Survive Lava for Brainrots span eight rarity categories: Common, Rare, Epic, Legendary, Mythic, Secret, Celestial, and Godly. The tiered system, combined with limited-time events like Blood Moon and special Celestial spawns, has created a thriving collector economy among dedicated players.</p>
+      </div>
+      <div class="story-card">
+        <h4>From January 2026 Launch to Nearly 600 Million Visits</h4>
+        <p>Created on January 30, 2026 by developer Johnny Lava and his small team including steakwad and scripter Santos_M27, Survive Lava for Brainrots has already surpassed 583 million visits. The rapid growth demonstrates the continued appetite for brainrot-themed survival games on the Roblox platform.</p>
+      </div>
     </div>
 
     

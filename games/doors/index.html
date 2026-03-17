@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>DOORS is a first-person horror game where you navigate through procedurally generated rooms while solving puzzles and avoiding terrifying entities. Each door could lead to safety or danger — learn the behaviors of each entity to survive. With its atmospheric design, daily runs, and new Battle Mode, DOORS delivers a thrilling horror experience that has captivated over 7 billion visits.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Hotel Horror Redefined Roblox Scary Games</h4>
+        <p>DOORS launched in 2022 and quickly became the gold standard for horror games on Roblox, proving the platform could deliver genuinely frightening experiences. The game's procedurally generated hotel rooms and unique entity encounters created tension that kept players on edge through every door they opened.</p>
+      </div>
+      <div class="story-card">
+        <h4>Entity Lore Spawned a Massive Fan Universe</h4>
+        <p>Each entity in DOORS, from the lurking Figure to the rushing Rush, developed distinct personalities and backstories through community interpretation. Fan animations, comics, and theories about the entities became a cultural phenomenon, with characters like Screech and Ambush achieving mascot-level recognition.</p>
+      </div>
+      <div class="story-card">
+        <h4>The Rooms Update Expanded the Horror Universe</h4>
+        <p>The addition of The Rooms as a sub-floor experience showed LSPLASH's ambition to expand DOORS beyond its original hotel setting. This update introduced new entities and mechanics while maintaining the core tension, proving the concept could scale into a broader horror franchise.</p>
+      </div>
+      <div class="story-card">
+        <h4>Speedrunning Community Pushed Impossible Times</h4>
+        <p>A dedicated speedrunning community formed around DOORS, with players racing to complete all 100 doors in record times. The procedural generation added a unique challenge to speedrunning since memorization was impossible, requiring runners to develop rapid reaction skills and entity knowledge.</p>
+      </div>
+      <div class="story-card">
+        <h4>Seven Billion Visits Made It a Horror Landmark</h4>
+        <p>DOORS surpassed seven billion visits, cementing its place as one of Roblox's all-time most successful games and arguably its greatest horror achievement. The milestone was celebrated by LSPLASH with special community events and teases for future content that kept anticipation high.</p>
+      </div>
     </div>
 
     

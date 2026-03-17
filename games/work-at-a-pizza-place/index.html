@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Work at a Pizza Place is one of Roblox's longest-running hits. Work as a team to fulfill food orders at the pizza parlor, taking on roles like cashier, cook, boxer, delivery driver, or supplier. Use your earnings to upgrade and customize your house with furniture and decorations. With its cooperative gameplay and charming simplicity, this classic has earned over 5 billion visits.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Oldest Continuously Popular Game on Roblox</h4>
+        <p>Created by Dued1 in 2008, Work at a Pizza Place has maintained an active player base for over seventeen years, making it arguably the most enduring game on Roblox. It has accumulated billions of visits while newer games have risen and fallen around it. The game's staying power is virtually unmatched in Roblox history.</p>
+      </div>
+      <div class="story-card">
+        <h4>House Customization Became the Real Endgame</h4>
+        <p>While the core gameplay involves working at a pizza restaurant, most long-term players became obsessed with earning coins to customize their in-game houses. The housing system transformed a simple work simulator into a creative expression platform where players showed off elaborate home designs. This secondary gameplay loop proved more addictive than the pizza-making itself.</p>
+      </div>
+      <div class="story-card">
+        <h4>Manager Role Created Hilarious Power Dynamics</h4>
+        <p>The player-elected manager role became a source of endless comedy and drama, as managers could fire workers, control the restaurant, and make announcements. Some managers took their duties seriously while others descended into gleeful chaos, creating unpredictable social dynamics. These emergent social moments became the game's most memorable and shareable content.</p>
+      </div>
+      <div class="story-card">
+        <h4>Dued1 Maintained the Game Across Multiple Roblox Eras</h4>
+        <p>Developer Dued1 continued updating Work at a Pizza Place across multiple generations of the Roblox platform, adapting it to new engine capabilities while preserving its charm. The game received visual overhauls, new job roles, and seasonal events that kept it feeling current. Dued1's long-term commitment to a single game was rare and admirable in the Roblox ecosystem.</p>
+      </div>
+      <div class="story-card">
+        <h4>Became a Cultural Touchstone for Roblox Community</h4>
+        <p>Work at a Pizza Place transcended being just a game to become a cultural reference point for the entire Roblox community. References to being a pizza delivery driver or getting fired by the manager became inside jokes understood by millions of players. The game's influence on Roblox culture is difficult to overstate, as it shaped how an entire generation thinks about the platform.</p>
+      </div>
     </div>
 
     

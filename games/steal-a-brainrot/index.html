@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Steal a Brainrot lets you build a base filled with weird-looking Brainrots that generate cash based on their rarity. Steal Brainrots from other players while defending your own base using bats, slappers, and traps. The game broke Roblox's all-time concurrent player record in September 2025, reaching over 25 million simultaneous users. Collect rare and legendary Brainrots, upgrade your defenses, and climb the leaderboards.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Steal a Brainrot Becomes First Game to Hit 25 Million Concurrent Players</h4>
+        <p>In October 2025, Steal a Brainrot achieved a peak of 25.4 million concurrent users, becoming the first Roblox game ever to surpass the 25 million CCU mark. The milestone shattered records previously held by Grow a Garden and even Fortnite's all-time peak of 15.3 million.</p>
+      </div>
+      <div class="story-card">
+        <h4>Admin War Event Drives Roblox to 47.4 Million Platform-Wide Players</h4>
+        <p>Steal a Brainrot's viral admin war event was so popular it pushed the entire Roblox platform to a new concurrent user record of 47.4 million players. The event surpassed Roblox's previous platform-wide record of 32.69 million set just months earlier in July 2025.</p>
+      </div>
+      <div class="story-card">
+        <h4>St. Patrick's Update Adds Lucky Blocks and Rainbow Events</h4>
+        <p>The March 15, 2026 St. Patrick's update introduced Lucky Blocks, a Lucky Pot that triggers Rainbow events every two hours, and a server-wide luck multiplier. Players collect 50 Gold Coins during Rainbow events to earn Leprechaun Lucky Blocks containing exclusive limited-time characters.</p>
+      </div>
+      <div class="story-card">
+        <h4>From Meme Game to Cultural Phenomenon</h4>
+        <p>What started as a tycoon simulator where players steal internet meme characters from a Red Carpet or rival bases has become one of the biggest games on any platform. Steal a Brainrot reached 24 million players across Roblox and Fortnite in a single day during its Extinct Event in September 2025.</p>
+      </div>
+      <div class="story-card">
+        <h4>Weekly Updates Fuel Explosive Growth</h4>
+        <p>Steal a Brainrot receives frequent weekly updates that expand the game with new rebirths, events, traits, machines, and limited-time content. The rapid content cadence has been key to maintaining its massive player base, with each new event consistently drawing millions of concurrent players.</p>
+      </div>
     </div>
 
     

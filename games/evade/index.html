@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Evade is an action parkour horror game where your movement skills are the key to survival. Terrifying Nextbots chase you through various maps, and you must run, dodge, and use tools to survive. With its blend of horror and comedy, featuring meme-inspired antagonists, Evade creates a uniquely chaotic experience. Use new tools, participate in seasonal events, and test your survival skills.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Nextbot Meme Culture Fueled Evade's Viral Rise</h4>
+        <p>Evade capitalized on the internet's obsession with Nextbots, AI-driven enemies featuring distorted meme face images that chase players relentlessly. The inherent humor and horror of being pursued by a giant cursed image created perfect content for YouTube and TikTok.</p>
+      </div>
+      <div class="story-card">
+        <h4>Game Peaked With Hundreds of Thousands Playing</h4>
+        <p>At its height, Evade attracted enormous concurrent player counts, briefly becoming one of the most played games on the entire Roblox platform. The game's simple but terrifying premise proved to have universal appeal across age groups.</p>
+      </div>
+      <div class="story-card">
+        <h4>Custom Nextbot Additions Kept Content Fresh</h4>
+        <p>The developers regularly added new Nextbot enemies based on trending memes and community suggestions, ensuring the game stayed culturally relevant. Each new Nextbot release generated excitement and speculation on social media about which meme would appear next.</p>
+      </div>
+      <div class="story-card">
+        <h4>Parkour Mechanics Added Surprising Skill Depth</h4>
+        <p>While the premise was simple, Evade's movement system included wall-running, sliding, and other parkour mechanics that rewarded skilled players. Mastering these techniques became its own subculture, with experienced players sharing movement tutorials and speedrun routes.</p>
+      </div>
+      <div class="story-card">
+        <h4>Multiplayer Chaos Created Unforgettable Moments</h4>
+        <p>The combination of large player counts and relentless Nextbot pursuers led to chaotic and hilarious situations that players couldn't stop sharing. Clips of entire servers being cornered or making miraculous escapes became some of the most shared Roblox content online.</p>
+      </div>
     </div>
 
     

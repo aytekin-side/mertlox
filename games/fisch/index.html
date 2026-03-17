@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Fisch is the ultimate fishing adventure on Roblox where exploration and progression are yours to control. Cast your line to catch rare and unique fish, each with over 400,000 possible variations. Explore diverse ocean biomes, upgrade your fishing gear, and compete with other anglers. Whether you're after the rarest legendary fish or just enjoying a relaxing day on the water, Fisch has something for everyone.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Fisch Dominated Roblox Charts Throughout Late 2024</h4>
+        <p>Fisch quickly became the definitive fishing game on Roblox, pulling in hundreds of thousands of concurrent players and topping the platform's most popular list. Its polished mechanics and deep progression system set a new standard for the genre.</p>
+      </div>
+      <div class="story-card">
+        <h4>Expansive Ocean Map Encouraged Exploration</h4>
+        <p>Unlike simpler fishing games, Fisch featured a vast open world with multiple biomes, hidden islands, and underwater caves to discover. This exploration element gave the game an adventure quality that kept players engaged beyond the core fishing loop.</p>
+      </div>
+      <div class="story-card">
+        <h4>Mythical Fish Catches Became Viral Celebrations</h4>
+        <p>The game's rarest fish had astronomically low catch rates, making each successful catch a community event. Players shared their mythical catches on social media and Discord, with some rare specimens becoming legendary status symbols.</p>
+      </div>
+      <div class="story-card">
+        <h4>Trading Economy Developed Surprising Depth</h4>
+        <p>An active player-driven trading economy emerged around rare fish, rods, and equipment, with dedicated Discord servers facilitating exchanges. The economy grew complex enough that players created value guides and tier lists to track market fluctuations.</p>
+      </div>
+      <div class="story-card">
+        <h4>Regular Content Updates Sustained Momentum</h4>
+        <p>The development team maintained player interest through consistent updates introducing new fish species, equipment, locations, and seasonal events. This steady content pipeline prevented the post-launch dropoff that many Roblox games experience after their initial viral surge.</p>
+      </div>
     </div>
 
     

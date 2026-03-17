@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Theme Park Tycoon 2 lets you design and build your ultimate dream theme park from scratch. Place thrilling roller coasters, exciting rides, food shops, and beautiful decorations to attract visitors and earn money. With an incredible building system that gives you full creative control, you can create anything from a small carnival to a massive world-class theme park. One of Roblox's most enduring classics.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Decade-Long Legacy as Roblox Tycoon Standard</h4>
+        <p>Originally released around 2012, Theme Park Tycoon 2 has endured as one of the longest-running and most beloved tycoon games on Roblox. While countless tycoon games have come and gone, its deep building tools and sandbox freedom kept players returning for over a decade. The game stands as proof that quality design can transcend Roblox's trend-driven ecosystem.</p>
+      </div>
+      <div class="story-card">
+        <h4>Creative Builds Rivaled Professional Theme Park Designs</h4>
+        <p>Players pushed the game's building system to extraordinary limits, constructing elaborate theme parks with intricate theming, custom landscapes, and creative ride layouts. Showcase videos of the most impressive parks regularly went viral on YouTube and Reddit. Some creations were so detailed they drew favorable comparisons to real-world theme park design.</p>
+      </div>
+      <div class="story-card">
+        <h4>Coaster Building System Offered Surprising Engineering Depth</h4>
+        <p>The roller coaster editor allowed players to design custom track layouts with realistic physics including g-forces, speed calculations, and terrain interaction. Aspiring engineers and coaster enthusiasts found genuine creative satisfaction in designing smooth, thrilling rides. The system taught basic principles of physics and engineering to millions of young players.</p>
+      </div>
+      <div class="story-card">
+        <h4>Guest AI and Economy Added Management Challenge</h4>
+        <p>Beyond building, players had to manage park finances, set ride prices, and keep virtual guests happy with food stalls and decorations. The economic simulation added genuine strategic depth that elevated the game beyond a simple building sandbox. Balancing income against expansion costs taught players basic business management principles.</p>
+      </div>
+      <div class="story-card">
+        <h4>Solo Developer Maintained Game with Consistent Quality</h4>
+        <p>Developer Den_S maintained Theme Park Tycoon 2 largely as a solo project, steadily adding new rides, scenery items, and features over the years. This one-person development approach was remarkable given the game's polish and the complexity of its systems. Den_S became respected in the community as a developer who prioritized quality and player experience over monetization.</p>
+      </div>
     </div>
 
     

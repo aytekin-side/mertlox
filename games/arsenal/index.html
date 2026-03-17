@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Arsenal is a fast-paced arcade FPS where you race to the top through a massive arsenal of weapons. From bazookas to spell books, each weapon keeps you guessing what's next. With stylish kill animations, dozens of unique weapons, and competitive gameplay, Arsenal delivers non-stop action. Earn BattleBucks to unlock skins, emotes, and other cosmetics.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Gun Rotation System Created Unique FPS Experience</h4>
+        <p>Arsenal's signature mechanic cycles players through a randomized set of weapons with each kill, inspired by the classic Gun Game mode from Counter-Strike. This design made every match feel fresh and kept the skill ceiling high since players couldn't rely on a single favorite weapon. The concept proved so popular it became one of the most-played FPS games on Roblox.</p>
+      </div>
+      <div class="story-card">
+        <h4>ROLVe's April Fools Updates Became Legendary</h4>
+        <p>Every April Fools' Day, ROLVe would release absurd updates featuring joke weapons, wacky maps, and bizarre game modes that players loved. These annual events became some of the most anticipated moments in the Arsenal community. The tradition showcased ROLVe's playful relationship with their fanbase and willingness to not take themselves too seriously.</p>
+      </div>
+      <div class="story-card">
+        <h4>Competitive Scene Attracted Skilled FPS Players</h4>
+        <p>Arsenal developed a dedicated competitive community with tournaments organized by both fans and content creators. High-level play featured impressive trick shots and speed runs through the weapon rotation that drew millions of views on YouTube. The game served as many young players' introduction to competitive first-person shooter gameplay.</p>
+      </div>
+      <div class="story-card">
+        <h4>John Roblox Collaboration Boosted Massive Popularity</h4>
+        <p>Popular YouTuber John Roblox became closely associated with Arsenal, with his videos regularly pulling millions of views and driving new players to the game. The creator's enthusiastic coverage helped Arsenal reach broader audiences beyond the core Roblox FPS community. ROLVe eventually added references and content inspired by prominent community figures.</p>
+      </div>
+      <div class="story-card">
+        <h4>Crossover Events Featured Iconic Characters and Skins</h4>
+        <p>Arsenal introduced numerous crossover skins and themed events that referenced popular culture, anime, and internet memes. The game's extensive skin collection became a major draw, with players grinding to unlock rare cosmetics. Limited-time skins from special events became highly coveted badges of honor among veteran players.</p>
+      </div>
     </div>
 
     

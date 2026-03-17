@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Emergency Hamburg is a detailed emergency services roleplaying game set in the German city of Hamburg. Choose from multiple roles including police officer, firefighter, medic, bus driver, car mechanic, truck driver, or criminal. Each role offers unique gameplay mechanics and responsibilities. Drive realistic vehicles, respond to emergencies, and interact with a vibrant community of players.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>German Emergency Services Simulation Found Global Audience</h4>
+        <p>Emergency Hamburg started as a niche German-language emergency services roleplay but gradually attracted an international player base. The game's detailed recreation of Hamburg's streets and realistic emergency response mechanics appealed to simulation fans worldwide. Its success proved that location-specific roleplay games could transcend language barriers on Roblox.</p>
+      </div>
+      <div class="story-card">
+        <h4>Detailed Vehicle Models Set New Roleplay Standards</h4>
+        <p>The game became known for its impressively detailed emergency vehicle models, including accurate recreations of German fire trucks, ambulances, and police cars. These high-quality assets raised expectations for what Roblox roleplay games could achieve visually. Players frequently praised the vehicles as some of the best-looking models on the entire platform.</p>
+      </div>
+      <div class="story-card">
+        <h4>Multiplayer Coordination Created Memorable Rescue Scenarios</h4>
+        <p>Emergency Hamburg's gameplay encouraged genuine teamwork, with players coordinating as firefighters, paramedics, and police to respond to emergencies. Some of the most memorable moments came from large-scale incidents where dozens of players worked together seamlessly. These cooperative experiences fostered a uniquely positive and helpful community culture.</p>
+      </div>
+      <div class="story-card">
+        <h4>Regular City Expansions Kept the Map Growing</h4>
+        <p>The development team consistently expanded the Hamburg map with new districts, buildings, and emergency scenarios. Each update gave players fresh areas to explore and new situations to respond to, maintaining long-term engagement. The evolving city became a living world that players felt genuinely invested in.</p>
+      </div>
+      <div class="story-card">
+        <h4>Inspired Wave of European City Roleplay Games</h4>
+        <p>Emergency Hamburg's success inspired a wave of similar European city-based emergency roleplay games on Roblox. Developers created their own versions set in cities across Germany and other countries, forming a new sub-genre on the platform. The original game remained the gold standard that newcomers measured themselves against.</p>
+      </div>
     </div>
 
     

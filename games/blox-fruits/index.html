@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Blox Fruits is an anime-inspired action RPG where you can become a powerful fighter by mastering swords or consuming magical Blox Fruits that grant devastating abilities. Train to become the strongest player, fight tough enemies and powerful bosses, and sail across vast oceans to discover hidden secrets. With dozens of unique fruits to find — from Flame and Ice to Dragon and Dough — every playthrough offers new powers to master.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Blox Fruits Celebrates 50 Billion Visits Milestone</h4>
+        <p>Blox Fruits held a special limited-time event to celebrate reaching 50 billion total visits on Roblox. Developer Gamer Robot also implemented a new weekly update schedule as part of the milestone celebration, promising more frequent content for the massive player base.</p>
+      </div>
+      <div class="story-card">
+        <h4>Fourth Sea Confirmed for December 2026</h4>
+        <p>Developers officially confirmed that the Fourth Sea, the most requested feature in community polls, will arrive in December 2026. It is expected to be the largest content drop in Blox Fruits history, comparable to the Third Sea update that added over 1,000 levels and dozens of new systems.</p>
+      </div>
+      <div class="story-card">
+        <h4>Update 29 Reworks Leopard Fruit and Adds Mutations</h4>
+        <p>Blox Fruits Update 29, released in February 2026, delivered a rework of the powerful Leopard fruit alongside new events, fish species, and the mutation system. The update also brought general fixes and quality-of-life improvements that the community had been requesting for months.</p>
+      </div>
+      <div class="story-card">
+        <h4>Celestial Fruit Teased by Developers</h4>
+        <p>The development team has repeatedly teased a new Celestial Fruit, expected to be a Beast-type fruit with transformation abilities and powerful effects. While early visuals may not reflect the final design, the Celestial Fruit has become one of the most anticipated additions in the game's 2026 roadmap.</p>
+      </div>
+      <div class="story-card">
+        <h4>2026 Roadmap Promises Fruit Reworks and Deeper Endgame</h4>
+        <p>The Blox Fruits development team revealed that 2026 will focus on bigger expansions, fruit reworks, and deeper endgame systems. Dark, Venom, and Quake fruits are among those mentioned for upcoming improvements, alongside the new Dungeon Mode and Trinkets system introduced in late 2025.</p>
+      </div>
     </div>
 
     

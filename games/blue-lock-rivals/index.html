@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Blue Lock: Rivals is an anime-inspired competitive soccer game based on the hit Blue Lock series. Enter intense 5v5 matches where individual skill and teamwork collide. Master powerful shots, dribble past defenders, and prove yourself as the ultimate striker. With a 97.6% like rating and over 4.5 billion visits, it's one of the most beloved sports games on Roblox.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Anime Soccer Fusion Found Massive Audience</h4>
+        <p>Blue Lock: Rivals combined the popular Blue Lock anime's intense soccer battles with Roblox gameplay to create something genuinely unique on the platform. The game tapped into both the anime community and sports game fans, quickly building a dedicated player base.</p>
+      </div>
+      <div class="story-card">
+        <h4>Ego System Captured the Anime's Spirit</h4>
+        <p>The game's ego and ability system faithfully adapted Blue Lock's concept of selfish, power-driven strikers into engaging gameplay mechanics. Players could develop unique playstyles and signature moves inspired by their favorite characters from the series.</p>
+      </div>
+      <div class="story-card">
+        <h4>Player Spikes During New Anime Episodes</h4>
+        <p>New episodes of the Blue Lock anime consistently drove player count spikes as fans rushed to the game to try out newly featured abilities and characters. This symbiotic relationship between the anime's broadcast schedule and game updates proved to be a powerful growth strategy.</p>
+      </div>
+      <div class="story-card">
+        <h4>Competitive Ranked Mode Drove Intense Rivalry</h4>
+        <p>The introduction of ranked competitive modes created fierce rivalries among top players, with leaderboard positions becoming highly contested. The competitive scene grew organically as skilled players formed teams and developed advanced strategies combining different character abilities.</p>
+      </div>
+      <div class="story-card">
+        <h4>Character Balance Updates Sparked Heated Debates</h4>
+        <p>Each balance patch adjusting character abilities triggered passionate community discussions about fairness and meta shifts. The developers navigated the challenge of keeping the game competitively balanced while staying true to the power levels depicted in the source material.</p>
+      </div>
     </div>
 
     

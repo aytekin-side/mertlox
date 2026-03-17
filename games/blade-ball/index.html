@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Blade Ball tests your focus, timing, and strategy as a deflectable homing ball hunts players with ever-increasing speed. Time your deflection perfectly to send the ball flying at your opponents. Unlock and upgrade powerful abilities that give you an edge in combat. With its simple-to-learn but hard-to-master gameplay, Blade Ball delivers intense competitive action every round.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Fastest Roblox Game to One Billion Visits</h4>
+        <p>Blade Ball became one of the fastest Roblox games ever to reach one billion visits after its 2023 launch, achieving the milestone in just a few months. Its simple yet addictive deflection-based combat mechanic proved universally appealing across age groups and skill levels.</p>
+      </div>
+      <div class="story-card">
+        <h4>Peak Concurrent Players Shattered Records</h4>
+        <p>At its height, Blade Ball reached over 600,000 concurrent players, placing it among the most-played Roblox experiences of all time. The game's accessibility and short match format made it perfect for both quick sessions and extended play.</p>
+      </div>
+      <div class="story-card">
+        <h4>YouTuber Collaborations Fueled Viral Growth</h4>
+        <p>Major Roblox content creators and YouTubers featured Blade Ball extensively, with videos regularly earning millions of views. The developers capitalized on this by adding creator-specific swords and hosting events that brought influencer communities into the game.</p>
+      </div>
+      <div class="story-card">
+        <h4>Sword Skins Created a Booming Economy</h4>
+        <p>The game's cosmetic sword skin system became a significant trading economy, with rare and limited skins commanding high values. Some exclusive event skins became status symbols within the community, driving engagement during time-limited drops.</p>
+      </div>
+      <div class="story-card">
+        <h4>Competitive Skill Ceiling Surprised Everyone</h4>
+        <p>What initially appeared to be a casual party game revealed surprising depth as skilled players developed advanced techniques like frame-perfect deflections and prediction-based strategies. A competitive meta emerged with tier lists for different sword abilities, and high-level gameplay clips went viral for their intensity.</p>
+      </div>
     </div>
 
     

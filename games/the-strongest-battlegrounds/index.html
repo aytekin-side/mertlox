@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>The Strongest Battlegrounds is a high-octane anime-inspired fighting game where you train hard and battle other players to prove you're the strongest. With fluid combat mechanics, ultimate abilities, and support for all devices including console, PC, and mobile, every fight is intense. Unlock powerful moves, climb the ranks, and dominate the battlegrounds.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Anime Fighters Flock to One Punch Inspired Combat</h4>
+        <p>The Strongest Battlegrounds drew massive attention by letting players embody characters inspired by One Punch Man and other anime series in fast-paced PvP combat. Its faithful recreation of iconic abilities resonated strongly with the anime fan community on Roblox.</p>
+      </div>
+      <div class="story-card">
+        <h4>Game Regularly Tops 100K Concurrent Players</h4>
+        <p>The Strongest Battlegrounds consistently maintained six-figure concurrent player counts, placing it among Roblox's most active experiences. This sustained popularity was remarkable for a fighting game genre that typically sees high turnover.</p>
+      </div>
+      <div class="story-card">
+        <h4>New Character Drops Cause Server Overloads</h4>
+        <p>Each time the developers released a new playable character with a unique moveset, servers experienced massive surges as players rushed to try them out. These character launches became community events in themselves, with countdown streams and tier list debates.</p>
+      </div>
+      <div class="story-card">
+        <h4>Competitive Community Organized Tournaments</h4>
+        <p>Skilled players established Discord-based tournament circuits with structured rulesets and bracket systems. These grassroots competitions helped legitimize the game as a serious fighting title and fostered a dedicated esports-adjacent community.</p>
+      </div>
+      <div class="story-card">
+        <h4>YouTube Combo Videos Went Viral Repeatedly</h4>
+        <p>Content creators discovered that the game's combat system allowed for flashy and devastating combo chains that made for compelling video content. Compilation videos of high-skill plays regularly accumulated millions of views, continuously driving new players to the game.</p>
+      </div>
     </div>
 
     

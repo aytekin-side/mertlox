@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>PLS DONATE is a unique social platform where you can earn Robux by creating and selling gamepasses to other players. Set up your personalized booth, write whatever you want on your sign, and interact with the community. Unlike traditional games with objectives, PLS DONATE focuses entirely on social interaction and virtual entrepreneurship. Donate to others or receive donations — it's the Roblox economy in action.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>PLS DONATE Popularized Roblox Donation Culture</h4>
+        <p>PLS DONATE created an entirely new genre on Roblox where the core gameplay loop revolves around giving and receiving Robux through clothing items. It sparked a wave of copycat donation games across the platform and fundamentally changed how young players think about virtual generosity.</p>
+      </div>
+      <div class="story-card">
+        <h4>Booth Customization Became a Status Symbol</h4>
+        <p>Players began elaborately decorating their donation booths to attract attention, turning the game into a fashion and creativity showcase. The most eye-catching booths often received the most donations, creating an informal economy around visual presentation.</p>
+      </div>
+      <div class="story-card">
+        <h4>YouTubers Donated Massive Robux Amounts on Stream</h4>
+        <p>Content creators turned PLS DONATE into viral content by joining servers and surprising random players with enormous Robux donations. These videos routinely garnered millions of views, driving huge traffic spikes to the game.</p>
+      </div>
+      <div class="story-card">
+        <h4>Game Hit Billions of Visits Remarkably Fast</h4>
+        <p>Despite having no traditional gameplay mechanics like combat or quests, PLS DONATE rocketed past several billion visits within its first couple of years. Its success proved that social interaction alone could sustain a top-tier Roblox experience.</p>
+      </div>
+      <div class="story-card">
+        <h4>Scam Awareness Became a Community Concern</h4>
+        <p>The game's open donation system led to widespread reports of players using deceptive tactics to solicit Robux from younger users. The developer and community responded with educational efforts and reporting tools, making PLS DONATE an unexpected lesson in online safety.</p>
+      </div>
     </div>
 
     

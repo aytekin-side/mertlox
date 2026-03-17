@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Phantom Forces is one of Roblox's most polished FPS experiences, featuring thousands of possible weapon loadouts with full customization including hundreds of attachments and skins. Available on both PC and console, the game offers tactical team-based gameplay across multiple game modes and maps. With its realistic gunplay and deep weapon system, Phantom Forces sets the standard for shooters on Roblox.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Most Realistic Military FPS on Roblox Platform</h4>
+        <p>Phantom Forces set the standard for tactical shooter gameplay on Roblox with its realistic weapon handling, ballistic physics, and detailed gun models. StyLiS Studios crafted an experience that genuinely rivaled standalone FPS games in terms of mechanical depth. The game proved that Roblox's engine could support sophisticated shooter gameplay far beyond what most believed possible.</p>
+      </div>
+      <div class="story-card">
+        <h4>Weapon Customization Rivals Standalone Shooter Games</h4>
+        <p>The game features an enormous arsenal of real-world firearms with extensive attachment systems including optics, barrels, grips, and ammunition types. Players can fine-tune every aspect of their loadout, creating a gunsmith experience that rivals games like Call of Duty. This depth of customization became one of the primary hooks keeping players engaged for years.</p>
+      </div>
+      <div class="story-card">
+        <h4>StyLiS Studios Began as Teen Developer Group</h4>
+        <p>The developers behind Phantom Forces started as teenagers who were passionate about military shooters and wanted to bring that experience to Roblox. What began as an ambitious hobby project evolved into one of the platform's most polished and longest-running games. Their story became emblematic of how young developers could create professional-quality experiences on Roblox.</p>
+      </div>
+      <div class="story-card">
+        <h4>Test Place Community Shaped Game Development Directly</h4>
+        <p>StyLiS Studios maintained a public test place where upcoming features and weapons were shared with players before official release. This transparent development process built deep trust between the studio and its community. Player feedback from the test environment directly influenced balance changes and feature implementations in the live game.</p>
+      </div>
+      <div class="story-card">
+        <h4>Game Maintained Relevance Across Nearly a Decade</h4>
+        <p>First released in 2015, Phantom Forces has remained consistently popular for close to a decade, a remarkable feat on a platform where games often rise and fall within months. Continuous updates adding new maps, weapons, and quality-of-life improvements kept the experience fresh. It stands as one of the longest-running success stories in Roblox gaming history.</p>
+      </div>
     </div>
 
     

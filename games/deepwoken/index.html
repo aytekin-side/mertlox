@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Deepwoken is an ambitious RPG featuring permanent character death, deep lore, and skill-based combat. Every story is yours to tell in this mysterious world where danger lurks around every corner. With extensive character progression, diverse builds, and a richly detailed world to explore, Deepwoken offers one of the most hardcore and rewarding RPG experiences on Roblox.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Permadeath System Made Every Life Feel Precious</h4>
+        <p>Deepwoken's permanent death mechanic, where characters can be permanently lost, created a level of tension rarely seen in Roblox games. Every encounter with a dangerous enemy or hostile player carried genuine stakes, making victories exhilarating and defeats devastating. This bold design choice attracted hardcore RPG fans who craved meaningful consequences in their gameplay.</p>
+      </div>
+      <div class="story-card">
+        <h4>Complex Build System Rivaled Traditional PC RPGs</h4>
+        <p>Deepwoken's character progression system featured a talent card system with hundreds of possible combinations, creating extraordinary build diversity. Players could specialize in different weapon types, magic schools, and passive abilities, making each character feel unique. The depth of the system inspired extensive theorycrafting communities that analyzed optimal builds.</p>
+      </div>
+      <div class="story-card">
+        <h4>Paid Access Model Proved Controversial but Effective</h4>
+        <p>Deepwoken launched with a paid access price tag, which was controversial in the free-to-play Roblox ecosystem. Critics argued it was too expensive, while supporters said it improved the community quality by raising the barrier to entry. The gamble paid off financially, and the game maintained a dedicated player base willing to invest in a premium experience.</p>
+      </div>
+      <div class="story-card">
+        <h4>PvP Combat System Earned Widespread Praise</h4>
+        <p>The game's skill-based combat system, featuring parries, feints, and combo mechanics, was widely regarded as one of the best fighting systems on Roblox. Skilled players could overcome opponents with superior gear through pure mechanical ability and game knowledge. Competitive PvP content became hugely popular on YouTube, with montage videos showcasing impressive combat skills.</p>
+      </div>
+      <div class="story-card">
+        <h4>Mysterious Lore and World Design Captivated Players</h4>
+        <p>Deepwoken's world was filled with cryptic lore, hidden locations, and mysterious events that players spent months trying to unravel. The developers at Monad Studios deliberately kept information scarce, encouraging organic community discovery and speculation. This approach to worldbuilding created a sense of wonder and exploration that kept the game feeling fresh long after launch.</p>
+      </div>
     </div>
 
     

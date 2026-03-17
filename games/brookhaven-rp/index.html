@@ -288,6 +288,30 @@ nav {
 }
 .lightbox-close:hover { opacity: 1; }
 
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+}
+
 /* FOOTER */
 footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1px solid var(--border); }
 .footer-brand { font-family: 'Chakra Petch', sans-serif; font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0.4rem; }
@@ -306,6 +330,30 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
   .filter-tags { justify-content: center; }
   .screenshots-grid { grid-template-columns: 1fr; }
   .detail-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* STORIES */
+.detail-stories { margin-bottom: 2.5rem; }
+.detail-stories > h3 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 1.1rem; margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.detail-stories > h3::before {
+  content: ''; display: inline-block; width: 4px; height: 1.1em;
+  background: var(--red); border-radius: 2px;
+}
+.story-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.story-card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.story-card h4 {
+  font-family: 'Chakra Petch', sans-serif; font-size: 0.95rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1.4;
+}
+.story-card p {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
 }
 
 #detail-view { display: block; }
@@ -367,6 +415,31 @@ footer { padding: 2rem clamp(1.5rem,4vw,3rem); text-align: center; border-top: 1
     <div class="detail-desc">
       <h3>About This Game</h3>
       <p>Brookhaven RP is the most visited game in Roblox history. It's a life simulation where you can choose from amazing houses, customize your home, drive cool vehicles, and roleplay as whoever you want to be. Hang out with friends, explore the city, and create your own stories in this open-world experience. Regular updates add new vehicles, houses, and features.</p>
+    </div>
+
+    
+    <div class="detail-stories">
+      <h3>Stories &amp; News</h3>
+      <div class="story-card">
+        <h4>Voldex Acquires Brookhaven in Major Deal</h4>
+        <p>In February 2025, Roblox studio company Voldex acquired Brookhaven RP from original developer Wolfpaq for an undisclosed price. The acquisition brought new resources and a dedicated development team to one of Roblox's most consistently popular roleplay experiences.</p>
+      </div>
+      <div class="story-card">
+        <h4>Brookhaven Shatters Concurrent Player Record</h4>
+        <p>On December 19, 2025, Brookhaven RP set a new all-time record with 1,296,208 concurrent players, ranking as the most-played experience on Roblox at the time. The milestone came shortly after the game's Winter Festival event launched, drawing massive crowds to the seasonal content.</p>
+      </div>
+      <div class="story-card">
+        <h4>Cherry Blossom Update Brings Free Housing</h4>
+        <p>The Cherry Blossom update, released on March 13, 2026, introduced a new Cherry Blossom-themed house available for free to all players. Players can place the seasonal home on any empty plot, continuing Brookhaven's tradition of regularly refreshing its housing options.</p>
+      </div>
+      <div class="story-card">
+        <h4>Weekly Friday Updates Keep Community Engaged</h4>
+        <p>Under Voldex's stewardship, Brookhaven RP has maintained a consistent weekly update schedule, with new content typically dropping on Fridays between 12:00 PM and 3:00 PM EST. Recent additions include new vehicles, vehicle wraps, seasonal events, and the popular gifting feature introduced during Easter 2025.</p>
+      </div>
+      <div class="story-card">
+        <h4>Winter Festival 2025 Transforms the Map</h4>
+        <p>The Winter Festival 2025 event replaced the mall and Eagle View plot with a holiday-themed winter wonderland. Combined with the New Year's celebrations and new vehicle additions in January 2026, the seasonal content drove Brookhaven to its record-breaking player counts.</p>
+      </div>
     </div>
 
     
